@@ -1,22 +1,13 @@
 import styled from "styled-components"
 
-const NavBar = styled.div `
-    height: 80px;
+const Wrapper = styled.div `
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 100px;
     display: flex;
-    justify-content: center;
-    `
-    
-    const Wrapper = styled.div `
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    // padding-right: 200px;
-    display: flex;
-    width: 1100px;
-    // max-width: 1100px;
     justify-content: space-between;
     align-items: center;
-    `
+`
     
 const MenuItemsWrapper = styled.div `
     display: flex;
@@ -25,7 +16,7 @@ const MenuItemsWrapper = styled.div `
 `
 
 const LogoWrapper = styled.div `
-    max-width: 300px;
+    width: 400px;
     text-align: center;
 `
 
@@ -36,4 +27,4 @@ const MenuItem = styled.p `
     letter-spacing: 0.1rem;
 `
 
-export {NavBar, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper}
+export {Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper}
