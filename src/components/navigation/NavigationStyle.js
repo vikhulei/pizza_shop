@@ -1,10 +1,8 @@
 import styled from "styled-components"
+import { WrapperStyled } from "../ui/StyledComponents"
 
-const Wrapper = styled.div `
+const Wrapper = styled(WrapperStyled) `
     padding: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 `
     
 const MenuItemsWrapper = styled.div `

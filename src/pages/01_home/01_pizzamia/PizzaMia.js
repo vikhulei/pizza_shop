@@ -1,8 +1,12 @@
-
+import { Background, Wrapper } from "./PizzaMiaStyle"
 
 const PizzaMia = () => {
   return (
-    <div>PizzaMia</div>
+    <Background>
+      <Wrapper>
+
+      </Wrapper>
+    </Background>
   )
 }
 
