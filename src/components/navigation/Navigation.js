@@ -1,7 +1,7 @@
 import { Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper } from "./NavigationStyle"
 import logo from "../../assets/logo.png"
 
-const Navigation = () => {
+const Navigation = () => { 
     return (
             <Wrapper>
                 <MenuItemsWrapper>

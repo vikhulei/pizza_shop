@@ -1,8 +1,9 @@
+import "./App.css"
 import Navigation from "./components/navigation/Navigation"
 
 function App() {
   return (
-    <div>
+    <div className="mainWrapper">
       <Navigation />
     </div>
   );
