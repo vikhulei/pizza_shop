@@ -17,7 +17,6 @@ const LogoWrapper = styled.div `
 `
 
 const MenuItem = styled.p `
-    font-family: verdana;
     font-weight: bold;
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
