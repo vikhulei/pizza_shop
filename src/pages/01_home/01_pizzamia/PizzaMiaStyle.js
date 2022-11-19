@@ -12,6 +12,7 @@ const Wrapper = styled(WrapperStyled) `
     height: 700px;
     color: white;
 `
+
 const CallToActionWrapper = styled.div `
     width: 50%;
     height: 55%;

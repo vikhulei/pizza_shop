@@ -12,29 +12,39 @@ const WrapperStyled = styled.div `
     align-items: center;
 `
 
-const Heading = styled.h1 `
-
-`
-const SubHeading = styled.h2 `
-
-`
-const SubHeadingBold = styled.h2 `
-
-`
-const ColorHeading = styled.h1 `
-
+const HeadingStyled = styled.h1 `
+    font-size: 2.5rem;
+    line-height: 1;
+    `
+    
+const SubHeadingStyled = styled.h2 `
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 1;
 `
 
-const Caption = styled.p `
+const SubHeadingBoldStyled = styled.h2 `
 
 `
 
-const CaptionBold = styled.p `
+const ColorHeadingStyled = styled.h1 `
 
 `
 
-const Button = styled.a `
-    padding: 10px 35px;
+const CaptionStyled = styled.p `
+    font-size: 1.1rem;
+`
+
+const CaptionBoldStyled = styled.p `
+    font-size: 1.1rem;
+    font-weight: bold;
+`
+
+const ButtonStyled = styled.a `
+    display: flex;
+    align-items: center;
+    width: 150px;
+    padding: 13px 35px;
     background-color: ${dark};
     border-radius: 15px;
     border-top-left-radius: 0px;
@@ -47,5 +57,4 @@ const Button = styled.a `
     }
 `
 
-
-export {WrapperStyled, Heading, SubHeading, SubHeadingBold, ColorHeading, Caption, CaptionBold, Button}
+export { WrapperStyled, HeadingStyled, SubHeadingStyled, SubHeadingBoldStyled, ColorHeadingStyled, CaptionStyled, CaptionBoldStyled, ButtonStyled }

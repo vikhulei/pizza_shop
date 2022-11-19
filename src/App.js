@@ -9,7 +9,7 @@ function App() {
       <Navigation />
       <PizzaMia />
       <ChooseSlice />
-      <ChooseSlice />
+      <PizzaMia />
     </div>
   );
 }
