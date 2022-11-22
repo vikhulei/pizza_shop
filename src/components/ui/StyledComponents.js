@@ -4,6 +4,7 @@ import { colors } from "../Colors"
 const {dark} = colors
 
 const WrapperStyled = styled.div `
+    position: relative;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
@@ -28,7 +29,8 @@ const SubHeadingBoldStyled = styled.h2 `
 `
 
 const ColorHeadingStyled = styled.h1 `
-
+    font-size: 1.85rem;
+    color: ${dark};
 `
 
 const CaptionStyled = styled.p `
@@ -44,9 +46,9 @@ const ButtonStyled = styled.a `
     display: flex;
     align-items: center;
     width: 150px;
-    padding: 13px 35px;
+    padding: 15px 35px;
     background-color: ${dark};
-    border-radius: 15px;
+    border-radius: 25px;
     border-top-left-radius: 0px;
     color: black;
     font-size: 0.9rem;

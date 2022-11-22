@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { colors } from "../../../components/Colors"
-import { WrapperStyled } from "../../../components/ui/StyledComponents"
+import { ButtonStyled, CaptionBoldStyled, CaptionStyled, ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
 
 const {background, dark} = colors
 
@@ -9,100 +9,75 @@ const Background = styled.div `
 `
 
 const Wrapper = styled(WrapperStyled) `
-    height: 700px;
+    height: 600px;
     color: white;
 `
 
-const CallToActionWrapper = styled.div `
-    width: 50%;
-    height: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-`
-
-const PizzaMiaWrapper = styled.div `
+const LeftWrapper = styled.div `
 
 `
 
-const Heading = styled.p `
-    font-family: Fuzzy Bubbles;
-    font-size: 6rem;
-    font-weight: bold;
-    color: ${dark};
+const ColorHeading = styled(ColorHeadingStyled) `
+    margin-bottom: 20px;
 `
 
-const SubHeading = styled.p `
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    margin-bottom: 30px;
+const Heading = styled(HeadingStyled) `
+
 `
 
-const OrderButton = styled.a `
-    padding: 10px 35px;
+const SubHeading = styled(SubHeadingStyled) `
+    margin-bottom: 20px;
+`
+
+const Text = styled.p `
+    margin-bottom: 20px;
+`
+
+const Button = styled(ButtonStyled) `
+    width: 200px;
+    margin-top: 40px;
+`
+
+const ImageContainer = styled.div `
+    width: 650px;
+`
+
+const Image = styled.img `
+    width: 100%;
+`
+
+const BottomWrapper = styled.div `
+    position: absolute;
+    bottom: -100px;
+    width: 1000px;
+    height: 200px;
     background-color: ${dark};
-    border-radius: 15px;
-    border-top-left-radius: 0px;
-    color: black;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    &:active {
-        background-color: darkred;
-    }
-`
-
-const IconsTextsWrapper = styled.div `
-    width: 80%;
+    border-radius: 30px;
     display: flex;
     justify-content: space-between;
+    padding: 0 50px;
 `
 
 const IconTextContainer = styled.div `
     display: flex;
-`
-
-const IconWrapper = styled.div `
-
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 33px 0;
+    color: black;
 `
 
 const Icon = styled.img `
-    height: 50px;
+    height: 70px;
 `
 
-const TextWrapper = styled.div `
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.85rem;
-`
-
-const IconHeading = styled.p `
-    margin-bottom: 10px;
-    font-weight: bold;
-`
-    
-const IconSubHeading = styled.p `
+const CaptionBold = styled(CaptionBoldStyled) `
 
 `
 
-const PizzaImageContainer = styled.div `
-    
-`
-
-const PizzaImage = styled.img `
+const Caption = styled(CaptionStyled) `
 
 `
 
-const Counter = styled.div `
-    margin-top: 20px;
-    width: 200px;
-    height: 60px;
-    background-color: darkred;
-    color: white;
-    text-align: center;
-    line-height: 2;
-    font-size: 2rem;
-`
-
-export { Background, Wrapper, CallToActionWrapper, PizzaMiaWrapper, Heading, SubHeading, OrderButton, IconsTextsWrapper, IconTextContainer, IconWrapper, Icon, TextWrapper, IconHeading, IconSubHeading, PizzaImageContainer, PizzaImage, Counter }
+export { Background, Wrapper, LeftWrapper, ColorHeading, Heading, SubHeading, Text, Button, ImageContainer, Image, BottomWrapper, IconTextContainer, Icon, CaptionBold, Caption }
