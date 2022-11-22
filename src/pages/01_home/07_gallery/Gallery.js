@@ -1,9 +1,9 @@
-import { Background, Wrapper, CallToActionWrapper, PizzaMiaWrapper, Heading, SubHeading, OrderButton, IconsTextsWrapper, IconTextContainer, IconWrapper, Icon, TextWrapper, IconHeading, IconSubHeading, PizzaImageContainer, PizzaImage, Counter } from "./SliceSliceStyle"
+import { Background, Wrapper, CallToActionWrapper, PizzaMiaWrapper, Heading, SubHeading, OrderButton, IconsTextsWrapper, IconTextContainer, IconWrapper, Icon, TextWrapper, IconHeading, IconSubHeading, PizzaImageContainer, PizzaImage, Counter } from "./GalleryStyle"
 import pizza_mia1 from "../../../assets/home/pizza_mia1.png"
 import catIcon from "../../../assets/home/pizza_mia2.jpg"
 import cheeseIcon from "../../../assets/home/pizza_mia3.jpg"
 
-const SliceSlice = () => {
+const Gallery = () => {
 
   return (
     <Background>
@@ -50,4 +50,4 @@ const SliceSlice = () => {
   )
 }
 
-export default SliceSlice
+export default Gallery
