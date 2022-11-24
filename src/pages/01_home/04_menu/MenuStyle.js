@@ -5,7 +5,7 @@ import { colors } from "../../../components/Colors";
 const {backgroundColor, light} = colors
 
 const Wrapper = styled(WrapperStyled)`
-    height: 930px;
+    height: 1200px;
     padding: 100px 0;
     display: flex;
     flex-direction: column;
@@ -17,10 +17,16 @@ const TopWrapper = styled.div `
     text-align: center;
 `
 
-const BottomWrapper = styled.div `
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+const Heading = styled(HeadingStyled) `
+
+`
+
+const SubHeading = styled(SubHeadingStyled) `
+
+`
+
+const MiddleWrapper = styled.div `
+
 `
 
 const ImageTextWrapper = styled.div `
@@ -39,12 +45,11 @@ const Image = styled.img `
     width: 100%;
 `
 
-const Heading = styled(HeadingStyled) `
 
-`
-
-const SubHeading = styled(SubHeadingStyled) `
-
+const BottomWrapper = styled.div `
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 `
 
 const Caption = styled(CaptionStyled) `
@@ -59,4 +64,4 @@ const Button = styled(ButtonStyled) `
 
 `
 
-export {Wrapper, TopWrapper, BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold, Button}
+export {Wrapper, TopWrapper, MiddleWrapper,BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold, Button}

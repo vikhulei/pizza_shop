@@ -1,4 +1,4 @@
-import { Wrapper, TopWrapper, BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold, Button } from "./MenuStyle";
+import { Wrapper, TopWrapper, MiddleWrapper,BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold, Button } from "./MenuStyle";
 import chooseSlice1 from "../../../assets/home/chooseSlice1.png"
 import chooseSlice2 from "../../../assets/home/chooseSlice2.png"
 import chooseSlice3 from "../../../assets/home/chooseSlice3.png"
@@ -11,46 +11,8 @@ const Menu = () => {
             <TopWrapper>
                 <Heading>Choose Your Slice</Heading>
                 <SubHeading>popular pizza flavors</SubHeading>
-                <Image src={chooseSlice4} style={{"maxWidth": "65px"}} alt="pizza slice" />
             </TopWrapper>
-            <BottomWrapper>
-                <ImageTextWrapper>
-                    <Image src={chooseSlice1} alt="Pizza image" />
-                    <div>
-                    <CaptionBold>Traditional Pizza #1</CaptionBold>
-                    <Caption>Peperoni & cheese</Caption>
-                    </div>
-                    <CaptionBold>$19.00</CaptionBold>
-                    <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
-                        Order
-                    </Button>
-                </ImageTextWrapper>
-                <ImageTextWrapper>
-                    <Image src={chooseSlice2} alt="Pizza image" />
-                    <div>
-                    <CaptionBold>Traditional Pizza #2</CaptionBold>
-                    <Caption>Ham & double cheese</Caption>
-                    </div>
-                    <CaptionBold>$25.00</CaptionBold>
-                    <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
-                        Order
-                    </Button>
-                </ImageTextWrapper>
-                <ImageTextWrapper>
-                    <Image src={chooseSlice3} alt="Pizza image" />
-                    <div>
-                    <CaptionBold>Traditional Pizza #3</CaptionBold>
-                    <Caption>Peperoni & veggies</Caption>
-                    </div>
-                    <CaptionBold>$29.00</CaptionBold>
-                    <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
-                        Order
-                    </Button>
-                </ImageTextWrapper>
-            </BottomWrapper>
+            
         </Wrapper>
     )
 }
