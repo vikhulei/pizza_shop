@@ -1,18 +1,105 @@
-import { Wrapper, TopWrapper, MiddleWrapper,BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold, Button } from "./MenuStyle";
+import { Wrapper, TopWrapper, MiddleWrapper, BottomWrapper, ColumnInBottomWrapper, PizzaNameContainer, PizzaLine, Line, Price, ImageTextWrapper, Image, TextWrapper, Heading, SubHeading, Caption, CaptionBold, MenuItemName, MenuItemDescription, Button } from "./MenuStyle";
 import chooseSlice1 from "../../../assets/home/chooseSlice1.png"
-import chooseSlice2 from "../../../assets/home/chooseSlice2.png"
 import chooseSlice3 from "../../../assets/home/chooseSlice3.png"
-import chooseSlice4 from "../../../assets/home/chooseSlice4.png"
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 const Menu = () => {
     return (
         <Wrapper>
             <TopWrapper>
-                <Heading>Choose Your Slice</Heading>
-                <SubHeading>popular pizza flavors</SubHeading>
+                <Heading>The Pizza Menu</Heading>
+                <SubHeading>pizza of my heart</SubHeading>
             </TopWrapper>
-            
+            <MiddleWrapper>
+                <ImageTextWrapper>
+                    <Image src={chooseSlice1} />
+                    <TextWrapper>
+                        <CaptionBold>Pepperoni & Cheese Pizza</CaptionBold>
+                        <Caption>Tuesday's Special</Caption>
+                        <Caption>$19</Caption>
+                        <Caption>2 + 1 gratis</Caption>
+                    </TextWrapper>
+                </ImageTextWrapper>
+                <ImageTextWrapper>
+                    <Image src={chooseSlice3} />
+                    <TextWrapper>
+                        <CaptionBold>Pepperoni & Veggie Pizza</CaptionBold>
+                        <Caption>Friday's Special</Caption>
+                        <Caption>$29</Caption>
+                        <Caption>2 + 1 gratis</Caption>
+                    </TextWrapper>
+                </ImageTextWrapper>
+            </MiddleWrapper>
+            <BottomWrapper>
+                <ColumnInBottomWrapper>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                </ColumnInBottomWrapper>
+                <ColumnInBottomWrapper>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                    <PizzaNameContainer>
+                        <PizzaLine>
+                            <MenuItemName>Margherita</MenuItemName>
+                            <Line></Line>
+                            <Price>$14.99</Price>
+                        </PizzaLine>
+                        <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
+                    </PizzaNameContainer>
+                </ColumnInBottomWrapper>
+            </BottomWrapper>
+            <Button>View The Menu</Button>
         </Wrapper>
     )
 }
