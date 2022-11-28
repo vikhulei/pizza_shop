@@ -9,7 +9,7 @@ const Background = styled.div `
 `
 
 const Wrapper = styled(WrapperStyled) `
-    height: 700px;
+    height: 800px;
     color: white;
 `
 
