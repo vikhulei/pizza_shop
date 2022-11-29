@@ -3,7 +3,7 @@ import chooseSlice1 from "../../../assets/home/chooseSlice1.png"
 import chooseSlice2 from "../../../assets/home/chooseSlice2.png"
 import chooseSlice3 from "../../../assets/home/chooseSlice3.png"
 import chooseSlice4 from "../../../assets/home/chooseSlice4.png"
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+// import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 const MinutesAway = () => {
     return (
@@ -22,7 +22,7 @@ const MinutesAway = () => {
                     </div>
                     <CaptionBold>$19.00</CaptionBold>
                     <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
+                        {/* <ArrowCircleRightIcon style={{ "height": "20px" }} /> */}
                         Order
                     </Button>
                 </ImageTextWrapper>
@@ -34,7 +34,7 @@ const MinutesAway = () => {
                     </div>
                     <CaptionBold>$25.00</CaptionBold>
                     <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
+                        {/* <ArrowCircleRightIcon style={{ "height": "20px" }} /> */}
                         Order
                     </Button>
                 </ImageTextWrapper>
@@ -46,7 +46,7 @@ const MinutesAway = () => {
                     </div>
                     <CaptionBold>$29.00</CaptionBold>
                     <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
+                        {/* <ArrowCircleRightIcon style={{ "height": "20px" }} /> */}
                         Order
                     </Button>
                 </ImageTextWrapper>

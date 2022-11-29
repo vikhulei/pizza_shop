@@ -25,7 +25,11 @@ const Heading = styled(HeadingStyled) `
 
 `
 
-const SubHeadingBold = styled(SubHeadingStyled) `
+const SubHeading = styled(SubHeadingStyled) `
+
+`
+
+const QuoteWrapper = styled.div `
 
 `
 
