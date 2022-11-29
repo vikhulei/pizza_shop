@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { colors } from "../../../components/Colors"
-import { WrapperStyled } from "../../../components/ui/StyledComponents"
+import { ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
 
 const {background, dark} = colors
 
@@ -13,96 +13,25 @@ const Wrapper = styled(WrapperStyled) `
     color: white;
 `
 
-const CallToActionWrapper = styled.div `
-    width: 50%;
-    height: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-`
-
-const PizzaMiaWrapper = styled.div `
+const LeftSideWrapper = styled.div `
 
 `
 
-const Heading = styled.p `
-    font-family: Fuzzy Bubbles;
-    font-size: 6rem;
-    font-weight: bold;
-    color: ${dark};
-`
-
-const SubHeading = styled.p `
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-`
-
-const OrderButton = styled.a `
-    padding: 10px 35px;
-    background-color: ${dark};
-    border-radius: 15px;
-    border-top-left-radius: 0px;
-    color: black;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    &:active {
-        background-color: darkred;
-    }
-`
-
-const IconsTextsWrapper = styled.div `
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-`
-
-const IconTextContainer = styled.div `
-    display: flex;
-`
-
-const IconWrapper = styled.div `
+const ColorHeading = styled(ColorHeadingStyled) `
 
 `
 
-const Icon = styled.img `
-    height: 50px;
-`
-
-const TextWrapper = styled.div `
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.85rem;
-`
-
-const IconHeading = styled.p `
-    margin-bottom: 10px;
-    font-weight: bold;
-`
-    
-const IconSubHeading = styled.p `
+const Heading = styled(HeadingStyled) `
 
 `
 
-const PizzaImageContainer = styled.div `
-    
-`
-
-const PizzaImage = styled.img `
+const SubHeadingBold = styled(SubHeadingStyled) `
 
 `
 
-const Counter = styled.div `
-    margin-top: 20px;
-    width: 200px;
-    height: 60px;
-    background-color: darkred;
-    color: white;
-    text-align: center;
-    line-height: 2;
-    font-size: 2rem;
+const Image = styled.img `
+
 `
 
-export { Background, Wrapper, CallToActionWrapper, PizzaMiaWrapper, Heading, SubHeading, OrderButton, IconsTextsWrapper, IconTextContainer, IconWrapper, Icon, TextWrapper, IconHeading, IconSubHeading, PizzaImageContainer, PizzaImage, Counter }
+
+export { Background, Wrapper }
