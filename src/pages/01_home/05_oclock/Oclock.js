@@ -8,16 +8,47 @@ import clock1c from "../../../assets/home/clock1c.png"
 const OClock = () => {
 
   const quoteContainer = useRef()
+  const quoteOne = useRef()
+  const quoteTwo = useRef()
+  const quoteThree = useRef()
   const dotOne = useRef()
   const dotTwo = useRef()
   const dotThree = useRef()
-  
-  const test = (pixels) => {
-    // const toLeft = quoteContainer.current.getBoundingClientRect().x * -1 + 20
-    // quoteContainer.current.style.left =
-    // `${pixels}px`
-    // console.log(toLeft)
-    // const toLeft = quoteContainer.current.getBoundingClientRect().x * -1 + 20
+
+  const test = () => {
+    const qOne = quoteOne.current
+    const qTwo = quoteTwo.current
+    const qThree = quoteThree.current
+
+    const observerOne = new IntersectionObserver(entries => {
+      entries.forEach(
+        entry => {
+          console.log("one")
+        }
+      )
+    })
+
+    const observerTwo = new IntersectionObserver(entries => {
+      entries.forEach(
+        entry => {
+          console.log("two")
+        }
+      )
+    })
+
+    const observerThree = new IntersectionObserver(entries => {
+      entries.forEach(
+        entry => {
+          console.log("three")
+        }
+      )
+    })
+
+
+
+    observerOne.observe(quoteOne.current)
+    observerTwo.observe(quoteTwo.current)
+    observerThree.observe(quoteThree.current)
   }
 
   const scrollToRef = (e) => {
@@ -56,15 +87,15 @@ const OClock = () => {
           <SubHeading>& we can make everyone happy</SubHeading>
           <QuoteBox>
             <QuoteContainer ref={quoteContainer}>
-          <QuoteWrapper className="quoteWrapper">
+          <QuoteWrapper id="dotOne" ref={quoteOne}>
             <Caption>PIZZA #1</Caption>
             <Caption>Pizza is the only love triangle I want</Caption>
           </QuoteWrapper>
-          <QuoteWrapper className="quoteWrapper">
+          <QuoteWrapper ref={quoteTwo}>
             <Caption>PIZZA #2</Caption>
             <Caption>Pizza is the only love triangle I want</Caption>
           </QuoteWrapper>
-          <QuoteWrapper className="quoteWrapper">
+          <QuoteWrapper ref={quoteThree}>
             <Caption>PIZZA #3</Caption>
             <Caption>Pizza is the only love triangle I want</Caption>
           </QuoteWrapper>
@@ -127,3 +158,31 @@ export default OClock
   // useEffect(() => {
   //   observer.observe(quoteOneRef.current)
   // }, [quoteOneRef, observer])
+
+
+      // const toLeft = quoteContainer.current.getBoundingClientRect().x * -1 + 20
+    // quoteContainer.current.style.left =
+    // `${pixels}px`
+    // console.log(toLeft)
+    // const toLeft = quoteContainer.current.getBoundingClientRect().x * -1 + 20
+
+    // const pos = quoteContainer.current.getBoundingClientRect().x
+    // quoteContainer.current.addEventListener("webkitAnimationIteration", () => console.log(pos))
+
+
+              // switch(entry.target) {
+          //   case qOne :
+          //   console.log("one")
+          //   break
+          //   case qTwo :
+          //   console.log("two")
+          //   break
+          //   case qThree :
+          //   console.log("three")
+          //   break
+          // }
+
+          // if(entry.isIntersecting) {
+          //   console.log(entry.target)
+          //   console.log(quoteOne.current)
+          // }
