@@ -2,30 +2,20 @@
 import styled, { keyframes, css } from "styled-components"
 import { colors } from "../../../components/Colors"
 import { CaptionStyled, ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
+import GradeIcon from '@mui/icons-material/Grade';
 
 const {background, dark} = colors
 
 const Animation = keyframes `
     0% {left: 400px}
-    5% {left: 0px}
-    33% {left: 0px}
-    38% {left: -1000px}
-    64% {left: -1000px}
-    69% {left: -2000px}
-    99% {left: -2000px}
+    5% {left: -10px}
+    33% {left: -10px}
+    38% {left: -1020px}
+    64% {left: -1020px}
+    69% {left: -2030px}
+    99% {left: -2030px}
     100% {left: -3000px}
 `
-
-// const Animation = keyframes `
-//     0% {transform: translateX(400px)}
-//     5% {transform: translateX(0px)}
-//     33% {transform: translateX(0px)}
-//     38% {transform: translateX(-1000px)}
-//     64% {transform: translateX(-1000px)}
-//     69% {transform: translateX(-2000px)}
-//     99% {transform: translateX(-2000px)}
-//     100% {transform: translateX(-3000px)}
-// `
 
 const Background = styled.div `
     background: url(${background});
@@ -64,7 +54,7 @@ const QuoteContainer = styled.div `
     position: absolute;
     width: fit-content;
     display: flex;
-    animation-name: "";
+    gap: 10px;
     animation-name: ${Animation};
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -72,7 +62,7 @@ const QuoteContainer = styled.div `
 
 const QuoteWrapper = styled.div `
     min-width: 1000px;
-    transition: 0.5s;
+    padding-left: 10px;
     `
 
 const Caption = styled(CaptionStyled) `
@@ -84,7 +74,13 @@ const AuthorWrapper = styled.div `
 `
 
 const StarWrapper = styled.div `
+    display: flex;
+`
 
+const Star = styled(GradeIcon) `
+    color: ${dark};
+    padding: 0;
+    margin: 0;
 `
 
 const DotsWrapper = styled.div `
@@ -122,4 +118,5 @@ const Image = styled.img `
 `
 
 
-export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image }
+
+export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image, Star }

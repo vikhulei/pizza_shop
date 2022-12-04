@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react"
 import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image } from "./OclockStyle"
+import { FiveStars } from "./FiveStars"
 import clock1a from "../../../assets/home/clock1a.png"
 import clock1b from "../../../assets/home/clock1b.png"
 import clock1c from "../../../assets/home/clock1c.png"
@@ -8,6 +9,7 @@ import clock1c from "../../../assets/home/clock1c.png"
 const OClock = () => {
 
   const quoteContainer = useRef()
+  const quoteBox = useRef()
   const quoteOne = useRef()
   const quoteTwo = useRef()
   const quoteThree = useRef()
@@ -15,40 +17,38 @@ const OClock = () => {
   const dotTwo = useRef()
   const dotThree = useRef()
 
-  const test = () => {
-    const qOne = quoteOne.current
-    const qTwo = quoteTwo.current
-    const qThree = quoteThree.current
-
-    const observerOne = new IntersectionObserver(entries => {
+  const dotsColoring = () => {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(
         entry => {
-          console.log("one")
+          const rightQuote = entry.target.id
+          if(entry.isIntersecting) {
+
+            switch(rightQuote) {
+              case "qOne":
+                dotOne.current.style.backgroundColor = "red"
+                dotTwo.current.style.backgroundColor = "yellow"
+                dotThree.current.style.backgroundColor = "yellow"
+                break
+              case "qTwo":
+                dotOne.current.style.backgroundColor = "yellow"
+                dotTwo.current.style.backgroundColor = "red"
+                dotThree.current.style.backgroundColor = "yellow"
+                break
+              case "qThree":
+                dotOne.current.style.backgroundColor = "yellow"
+                dotTwo.current.style.backgroundColor = "yellow"
+                dotThree.current.style.backgroundColor = "red"
+                break
+            }  
+          }
         }
       )
-    })
-
-    const observerTwo = new IntersectionObserver(entries => {
-      entries.forEach(
-        entry => {
-          console.log("two")
-        }
-      )
-    })
-
-    const observerThree = new IntersectionObserver(entries => {
-      entries.forEach(
-        entry => {
-          console.log("three")
-        }
-      )
-    })
-
-
-
-    observerOne.observe(quoteOne.current)
-    observerTwo.observe(quoteTwo.current)
-    observerThree.observe(quoteThree.current)
+    },
+    )
+    observer.observe(quoteOne.current)
+    observer.observe(quoteTwo.current)
+    observer.observe(quoteThree.current)
   }
 
   const scrollToRef = (e) => {
@@ -56,55 +56,41 @@ const OClock = () => {
     quoteContainer.current.style.animation = "none"
     quoteContainer.current.style.left = 
     `${pixels}px`
-
-    switch(pixels) {
-      case "0":
-        console.log(pixels)
-        dotOne.current.style.backgroundColor = "red"
-        dotTwo.current.style.backgroundColor = "yellow"
-        dotThree.current.style.backgroundColor = "yellow"
-        break
-      case "-1000":
-        dotOne.current.style.backgroundColor = "yellow"
-        dotTwo.current.style.backgroundColor = "red"
-        dotThree.current.style.backgroundColor = "yellow"
-        break
-      case "-2000":
-        dotOne.current.style.backgroundColor = "yellow"
-        dotTwo.current.style.backgroundColor = "yellow"
-        dotThree.current.style.backgroundColor = "red"
-        break
-    }
   }
 
+useEffect(() => {
+  dotsColoring()
+}, [])
 
   return (
     <Background>
       <Wrapper>
         <LeftSideWrapper>
-          <ColorHeading onClick={test}>It's pizza o'clock</ColorHeading>
+          <ColorHeading>It's pizza o'clock</ColorHeading>
           <Heading>We're Pizza</Heading>
           <SubHeading>& we can make everyone happy</SubHeading>
-          <QuoteBox>
+          <QuoteBox ref={quoteBox}>
             <QuoteContainer ref={quoteContainer}>
-          <QuoteWrapper id="dotOne" ref={quoteOne}>
+          <QuoteWrapper id="qOne" ref={quoteOne}>
             <Caption>PIZZA #1</Caption>
             <Caption>Pizza is the only love triangle I want</Caption>
           </QuoteWrapper>
-          <QuoteWrapper ref={quoteTwo}>
+          <QuoteWrapper id="qTwo" ref={quoteTwo}>
             <Caption>PIZZA #2</Caption>
             <Caption>Pizza is the only love triangle I want</Caption>
           </QuoteWrapper>
-          <QuoteWrapper ref={quoteThree}>
+          <QuoteWrapper id="qThree" ref={quoteThree}>
             <Caption>PIZZA #3</Caption>
             <Caption>Pizza is the only love triangle I want</Caption>
+            {/* <GradeIcon style={{"color": "yellow", "size": "8px"}}/> */}
+            <FiveStars />
           </QuoteWrapper>
           </QuoteContainer>
           </QuoteBox>
           <DotsWrapper>
-            <Dot ref={dotOne}  id="0" onClick={scrollToRef}></Dot>
-            <Dot ref={dotTwo} id="-1000" onClick={scrollToRef}></Dot>
-            <Dot ref={dotThree} id="-2000" onClick={scrollToRef}></Dot>
+            <Dot ref={dotOne}  id="-10" onClick={scrollToRef}></Dot>
+            <Dot ref={dotTwo} id="-1020" onClick={scrollToRef}></Dot>
+            <Dot ref={dotThree} id="-2030" onClick={scrollToRef}></Dot>
           </DotsWrapper>
         </LeftSideWrapper>
       </Wrapper>
@@ -186,3 +172,20 @@ export default OClock
           //   console.log(entry.target)
           //   console.log(quoteOne.current)
           // }
+
+
+              // const observerTwo = new IntersectionObserver(entries => {
+    //   entries.forEach(
+    //     entry => {
+    //       console.log("two")
+    //     }
+    //   )
+    // })
+
+    // const observerThree = new IntersectionObserver(entries => {
+    //   entries.forEach(
+    //     entry => {
+    //       console.log("three")
+    //     }
+    //   )
+    // })
