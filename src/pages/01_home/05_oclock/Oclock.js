@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from "react"
-import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image } from "./OclockStyle"
+import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image, Quote, Button } from "./OclockStyle"
 import { FiveStars } from "./FiveStars"
+import { QuoteOne, QuoteTwo, QuoteThree } from "./Quote"
 import clock1a from "../../../assets/home/clock1a.png"
 import clock1b from "../../../assets/home/clock1b.png"
 import clock1c from "../../../assets/home/clock1c.png"
@@ -72,18 +73,13 @@ useEffect(() => {
           <QuoteBox ref={quoteBox}>
             <QuoteContainer ref={quoteContainer}>
           <QuoteWrapper id="qOne" ref={quoteOne}>
-            <Caption>PIZZA #1</Caption>
-            <Caption>Pizza is the only love triangle I want</Caption>
+            <QuoteOne />
           </QuoteWrapper>
           <QuoteWrapper id="qTwo" ref={quoteTwo}>
-            <Caption>PIZZA #2</Caption>
-            <Caption>Pizza is the only love triangle I want</Caption>
+            <QuoteTwo />
           </QuoteWrapper>
           <QuoteWrapper id="qThree" ref={quoteThree}>
-            <Caption>PIZZA #3</Caption>
-            <Caption>Pizza is the only love triangle I want</Caption>
-            {/* <GradeIcon style={{"color": "yellow", "size": "8px"}}/> */}
-            <FiveStars />
+            <QuoteThree />
           </QuoteWrapper>
           </QuoteContainer>
           </QuoteBox>
@@ -92,6 +88,7 @@ useEffect(() => {
             <Dot ref={dotTwo} id="-1020" onClick={scrollToRef}></Dot>
             <Dot ref={dotThree} id="-2030" onClick={scrollToRef}></Dot>
           </DotsWrapper>
+          <Button>Make a Reservation</Button>
         </LeftSideWrapper>
       </Wrapper>
     </Background>

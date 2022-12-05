@@ -1,8 +1,9 @@
 
 import styled, { keyframes, css } from "styled-components"
 import { colors } from "../../../components/Colors"
-import { CaptionStyled, ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
+import { ButtonStyled, CaptionStyled, ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
 import GradeIcon from '@mui/icons-material/Grade';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const {background, dark} = colors
 
@@ -24,6 +25,7 @@ const Background = styled.div `
 const Wrapper = styled(WrapperStyled) `
     height: 800px;
     color: white;
+    padding-bottom: 15px;
 `
 
 const LeftSideWrapper = styled.div `
@@ -31,7 +33,7 @@ const LeftSideWrapper = styled.div `
 `
 
 const ColorHeading = styled(ColorHeadingStyled) `
-
+    margin-bottom: 30px;
 `
 
 const Heading = styled(HeadingStyled) `
@@ -39,20 +41,18 @@ const Heading = styled(HeadingStyled) `
 `
 
 const SubHeading = styled(SubHeadingStyled) `
-
+    margin-bottom: 30px;
 `
 const QuoteBox = styled.div `
     position: relative;
     overflow: hidden;
+    height: 220px;
     width: 400px;
-    height: 70px;
     white-space: nowrap;
-    display: flex;
 `
 const QuoteContainer = styled.div `
-    transition: 0.8s;
     position: absolute;
-    width: fit-content;
+    transition: 0.8s;
     display: flex;
     gap: 10px;
     animation-name: ${Animation};
@@ -62,15 +62,27 @@ const QuoteContainer = styled.div `
 
 const QuoteWrapper = styled.div `
     min-width: 1000px;
+    height: 220px;
     padding-left: 10px;
-    `
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
 
 const Caption = styled(CaptionStyled) `
 
 `
 
 const AuthorWrapper = styled.div `
+    display: flex;
+    width: 400px;
+`
 
+const NameStarWrapper = styled.div `
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0 10px 10px;
 `
 
 const StarWrapper = styled.div `
@@ -85,38 +97,47 @@ const Star = styled(GradeIcon) `
 
 const DotsWrapper = styled.div `
     cursor: pointer;
-    margin-top: 30px;
+    margin-left: 350px;
+    padding: 20px 0 80px;
     display: flex;
     width: 50px;
     justify-content: space-between;
 `
 
 const Dot = styled.div `
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: yellow;
 `
 
-const Dot2 = styled.div `
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: red;
-`
 
-const Dot3 = styled.div `
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: red;
+const Quote = styled(FormatQuoteIcon) `
+color: ${dark};
 `
-
 
 const Image = styled.img `
+    
+`
 
+const Button = styled(ButtonStyled) `
+    width: 250px;
 `
 
 
+export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Image, Star, Quote, NameStarWrapper, Button }
 
-export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image, Star }
+
+// const Dot2 = styled.div `
+//     width: 10px;
+//     height: 10px;
+//     border-radius: 50%;
+//     background-color: red;
+// `
+
+// const Dot3 = styled.div `
+//     width: 10px;
+//     height: 10px;
+//     border-radius: 50%;
+//     background-color: red;
+// `

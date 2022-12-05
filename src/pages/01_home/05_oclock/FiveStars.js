@@ -1,16 +1,13 @@
 import { Star } from "./OclockStyle";
-import styled from "styled-components";
-
-
 
 export const FiveStars = () => {
     return (
-        <>
+        <div>
         <Star style={{"fontSize": "20px"}} />
         <Star style={{"fontSize": "20px"}} />
         <Star style={{"fontSize": "20px"}} />
         <Star style={{"fontSize": "20px"}} />
         <Star style={{"fontSize": "20px"}} />
-        </>
+        </div>
     )
 }
