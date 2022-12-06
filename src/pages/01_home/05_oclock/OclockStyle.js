@@ -26,7 +26,7 @@ const Wrapper = styled(WrapperStyled) `
     height: 800px;
     color: white;
     padding-bottom: 15px;
-    // background-color: red;
+    min-width: 1350px;
 `
 
 const LeftSideWrapper = styled.div `
@@ -134,8 +134,8 @@ const RightSideWrapper = styled.div `
 const PizzaSlice = styled.img `
     position: absolute;
     width: 250px;
-    right: 130px;
-    top: 0;
+    right: 250px;
+    top: 30px;
 `
 
 

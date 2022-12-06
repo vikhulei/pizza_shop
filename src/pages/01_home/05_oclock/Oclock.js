@@ -92,8 +92,8 @@ useEffect(() => {
         </LeftSideWrapper>
         <RightSideWrapper>
           <PizzaSlice src={clock1a} alt="pizza slice"/>
-          <PizzaSlice src={clock1b} alt="pizza slice" style={{"top": "110px", "right": "0", "width": "340px"}}/>
-          <PizzaSlice src={clock1c} alt="pizza slice" style={{"top": "300px"}}/>
+          <PizzaSlice src={clock1b} alt="pizza slice" style={{"top": "100px", "right": "0", "width": "340px"}}/>
+          <PizzaSlice src={clock1c} alt="pizza slice" style={{"top": "330px", "right": "150px"}}/>
         </RightSideWrapper>
       </Wrapper>
     </Background>
