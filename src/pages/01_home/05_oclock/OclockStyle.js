@@ -26,6 +26,7 @@ const Wrapper = styled(WrapperStyled) `
     height: 800px;
     color: white;
     padding-bottom: 15px;
+    // background-color: red;
 `
 
 const LeftSideWrapper = styled.div `
@@ -117,15 +118,28 @@ color: ${dark};
 `
 
 const Image = styled.img `
-    
+
 `
 
 const Button = styled(ButtonStyled) `
     width: 250px;
 `
 
+const RightSideWrapper = styled.div `
+    position: relative;
+    height: 500px;
+    background-color: blue;
+`
 
-export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Image, Star, Quote, NameStarWrapper, Button }
+const PizzaSlice = styled.img `
+    position: absolute;
+    width: 250px;
+    right: 130px;
+    top: 0;
+`
+
+
+export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Image, Star, Quote, NameStarWrapper, Button, RightSideWrapper, PizzaSlice }
 
 
 // const Dot2 = styled.div `

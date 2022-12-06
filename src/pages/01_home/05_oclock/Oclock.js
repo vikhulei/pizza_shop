@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react"
-import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image, Quote, Button } from "./OclockStyle"
+import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image, Quote, Button, RightSideWrapper, PizzaSlice } from "./OclockStyle"
 import { FiveStars } from "./FiveStars"
 import { QuoteOne, QuoteTwo, QuoteThree } from "./Quote"
 import clock1a from "../../../assets/home/clock1a.png"
@@ -90,6 +90,11 @@ useEffect(() => {
           </DotsWrapper>
           <Button>Make a Reservation</Button>
         </LeftSideWrapper>
+        <RightSideWrapper>
+          <PizzaSlice src={clock1a} alt="pizza slice"/>
+          <PizzaSlice src={clock1b} alt="pizza slice" style={{"top": "110px", "right": "0", "width": "340px"}}/>
+          <PizzaSlice src={clock1c} alt="pizza slice" style={{"top": "300px"}}/>
+        </RightSideWrapper>
       </Wrapper>
     </Background>
   )
