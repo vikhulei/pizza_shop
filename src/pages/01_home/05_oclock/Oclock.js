@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react"
-import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image, Quote, Button, RightSideWrapper, PizzaSlice } from "./OclockStyle"
+import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Dot2, Dot3, Image, Quote, Button, RightSideWrapper, PizzaSliceTop, PizzaSliceRight, PizzaSliceBottom } from "./OclockStyle"
 import { FiveStars } from "./FiveStars"
 import { QuoteOne, QuoteTwo, QuoteThree } from "./Quote"
 import clock1a from "../../../assets/home/clock1a.png"
@@ -9,6 +9,8 @@ import clock1c from "../../../assets/home/clock1c.png"
 
 const OClock = () => {
 
+  const [showSlice, setShowSlice] = useState(true)
+
   const quoteContainer = useRef()
   const quoteBox = useRef()
   const quoteOne = useRef()
@@ -17,6 +19,7 @@ const OClock = () => {
   const dotOne = useRef()
   const dotTwo = useRef()
   const dotThree = useRef()
+  const sliceTop = useRef()
 
   const dotsColoring = () => {
     const observer = new IntersectionObserver(entries => {
@@ -91,9 +94,9 @@ useEffect(() => {
           <Button>Make a Reservation</Button>
         </LeftSideWrapper>
         <RightSideWrapper>
-          <PizzaSlice src={clock1a} alt="pizza slice"/>
-          <PizzaSlice src={clock1b} alt="pizza slice" style={{"top": "100px", "right": "0", "width": "340px"}}/>
-          <PizzaSlice src={clock1c} alt="pizza slice" style={{"top": "330px", "right": "150px"}}/>
+          <PizzaSliceTop ref={sliceTop} showSlice={showSlice} src={clock1a} alt="pizza slice"/>
+          <PizzaSliceRight showSlice={showSlice} src={clock1b} alt="pizza slice"/>
+          <PizzaSliceBottom showSlice={showSlice} src={clock1c} alt="pizza slice"/>
         </RightSideWrapper>
       </Wrapper>
     </Background>

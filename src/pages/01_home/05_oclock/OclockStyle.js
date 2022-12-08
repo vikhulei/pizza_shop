@@ -7,7 +7,7 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const {background, dark} = colors
 
-const Animation = keyframes `
+const AnimationQuote = keyframes `
     0% {left: 400px}
     5% {left: -10px}
     33% {left: -10px}
@@ -16,6 +16,45 @@ const Animation = keyframes `
     69% {left: -2030px}
     99% {left: -2030px}
     100% {left: -3000px}
+`
+
+const AnimationSliceTop = keyframes `
+    0% {top: -1000px}
+    55% {top: 60px}
+    70% {top: 30px}
+    85% {top: 40px}
+    100% {top: 30px}
+`
+    // 80% {top: 20px}
+    // 85% {top: 40px}
+
+const RunAnimationSliceTop = css `
+    animation: ${AnimationSliceTop} 1.3s ease-in-out
+`
+
+const AnimationSliceRight = keyframes `
+    0% {right: -1000px}
+    55% {right: 30px}
+    70% {right: 0px}
+    85% {right: 15px}
+    100% {right: 0px}
+`
+    // 80% {right: -10px}
+    // 85% {right: 10px}
+
+const RunAnimationSliceRight = css `
+    animation: ${AnimationSliceRight} 1.3s ease-in-out
+`
+const AnimationSliceBottom = keyframes `
+    0% {top: 1000px}
+    55% {top: 300px}
+    70% {top: 330px}
+    85% {top: 315px}
+    100% {top: 330px}
+`
+
+const RunAnimationSliceBottom = css `
+    animation: ${AnimationSliceBottom} 1.3s ease-in-out
 `
 
 const Background = styled.div `
@@ -56,7 +95,7 @@ const QuoteContainer = styled.div `
     transition: 0.8s;
     display: flex;
     gap: 10px;
-    animation-name: ${Animation};
+    animation-name: ${AnimationQuote};
     animation-duration: 10s;
     animation-iteration-count: infinite;
 `
@@ -131,15 +170,32 @@ const RightSideWrapper = styled.div `
     background-color: blue;
 `
 
-const PizzaSlice = styled.img `
+const PizzaSliceTop = styled.img `
     position: absolute;
     width: 250px;
     right: 250px;
-    top: 30px;
+    top: ${(({showSlice}) => showSlice ? "30px" : "-1000px")};
+    ${(({showSlice}) => showSlice ? RunAnimationSliceTop : "")}
+    `
+    
+    const PizzaSliceRight = styled.img `
+    position: absolute;
+    top: 100px;
+    width: 340px;
+    right: ${(({showSlice}) => showSlice ? "0px" : "-1000px")};
+    ${(({showSlice}) => showSlice ? RunAnimationSliceRight : "")}
+    `
+    
+    const PizzaSliceBottom = styled.img `
+    position: absolute;
+    right: 150px;
+    width: 250px;
+    top: ${(({showSlice}) => showSlice ? "330px" : "1000px")};
+    ${(({showSlice}) => showSlice ? RunAnimationSliceBottom : "")}
 `
 
 
-export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Image, Star, Quote, NameStarWrapper, Button, RightSideWrapper, PizzaSlice }
+export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Image, Star, Quote, NameStarWrapper, Button, RightSideWrapper, PizzaSliceTop, PizzaSliceRight, PizzaSliceBottom }
 
 
 // const Dot2 = styled.div `
