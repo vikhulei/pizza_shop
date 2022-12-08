@@ -25,8 +25,6 @@ const AnimationSliceTop = keyframes `
     85% {top: 40px}
     100% {top: 30px}
 `
-    // 80% {top: 20px}
-    // 85% {top: 40px}
 
 const RunAnimationSliceTop = css `
     animation: ${AnimationSliceTop} 1.3s ease-in-out
@@ -36,20 +34,19 @@ const AnimationSliceRight = keyframes `
     0% {right: -1000px}
     55% {right: 30px}
     70% {right: 0px}
-    85% {right: 15px}
+    85% {right: 10px}
     100% {right: 0px}
 `
-    // 80% {right: -10px}
-    // 85% {right: 10px}
 
 const RunAnimationSliceRight = css `
     animation: ${AnimationSliceRight} 1.3s ease-in-out
 `
+
 const AnimationSliceBottom = keyframes `
     0% {top: 1000px}
     55% {top: 300px}
     70% {top: 330px}
-    85% {top: 315px}
+    85% {top: 320px}
     100% {top: 330px}
 `
 
@@ -151,14 +148,11 @@ const Dot = styled.div `
     background-color: yellow;
 `
 
-
 const Quote = styled(FormatQuoteIcon) `
 color: ${dark};
 `
 
-const Image = styled.img `
-
-`
+const Image = styled.img ``
 
 const Button = styled(ButtonStyled) `
     width: 250px;
@@ -174,19 +168,20 @@ const PizzaSliceTop = styled.img `
     position: absolute;
     width: 250px;
     right: 250px;
+    visibility: ${(({showSlice}) => showSlice ? "visible" : "hidden")};
     top: ${(({showSlice}) => showSlice ? "30px" : "-1000px")};
     ${(({showSlice}) => showSlice ? RunAnimationSliceTop : "")}
-    `
+`
     
-    const PizzaSliceRight = styled.img `
+const PizzaSliceRight = styled.img `
     position: absolute;
     top: 100px;
     width: 340px;
     right: ${(({showSlice}) => showSlice ? "0px" : "-1000px")};
     ${(({showSlice}) => showSlice ? RunAnimationSliceRight : "")}
-    `
+`
     
-    const PizzaSliceBottom = styled.img `
+const PizzaSliceBottom = styled.img `
     position: absolute;
     right: 150px;
     width: 250px;
@@ -196,18 +191,3 @@ const PizzaSliceTop = styled.img `
 
 
 export { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteContainer, QuoteWrapper, Caption, AuthorWrapper, StarWrapper, DotsWrapper, Dot, Image, Star, Quote, NameStarWrapper, Button, RightSideWrapper, PizzaSliceTop, PizzaSliceRight, PizzaSliceBottom }
-
-
-// const Dot2 = styled.div `
-//     width: 10px;
-//     height: 10px;
-//     border-radius: 50%;
-//     background-color: red;
-// `
-
-// const Dot3 = styled.div `
-//     width: 10px;
-//     height: 10px;
-//     border-radius: 50%;
-//     background-color: red;
-// `

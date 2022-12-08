@@ -20,7 +20,7 @@ const HeadingStyled = styled.h1 `
     
 const SubHeadingStyled = styled.h2 `
     font-weight: 200;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 1;
 `
 
