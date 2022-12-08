@@ -1,54 +1,33 @@
-import { Wrapper, TopWrapper, BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold, Button } from "./MinutesAwayStyle";
-import chooseSlice1 from "../../../assets/home/chooseSlice1.png"
-import chooseSlice2 from "../../../assets/home/chooseSlice2.png"
-import chooseSlice3 from "../../../assets/home/chooseSlice3.png"
+import { Wrapper, TopWrapper, BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold } from "./MinutesAwayStyle";
 import chooseSlice4 from "../../../assets/home/chooseSlice4.png"
+import minutes1 from "../../../assets/home/minutes1.jpg"
+import minutes2 from "../../../assets/home/minutes2.jpg"
+import minutes3 from "../../../assets/home/minutes3.jpg"
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 const MinutesAway = () => {
     return (
         <Wrapper>
             <TopWrapper>
-                <Heading>Choose Your Slice</Heading>
-                <SubHeading>popular pizza flavors</SubHeading>
-                <Image src={chooseSlice4} style={{"maxWidth": "65px"}} alt="pizza slice" />
+                <Heading>Just 45 Minutes Away</Heading>
+                <SubHeading>hot stuff at your doorstep</SubHeading>
+                <Image src={chooseSlice4} alt="slice" style={{"width": "65px", "marginTop": "10px"}} />
             </TopWrapper>
             <BottomWrapper>
                 <ImageTextWrapper>
-                    <Image src={chooseSlice1} alt="Pizza image" />
-                    <div>
-                    <CaptionBold>Traditional Pizza #1</CaptionBold>
-                    <Caption>Peperoni & cheese</Caption>
-                    </div>
-                    <CaptionBold>$19.00</CaptionBold>
-                    <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
-                        Order
-                    </Button>
+                    <Image src={minutes1} />
+                    <CaptionBold>Order Pizza</CaptionBold>
+                    <Caption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo</Caption>
                 </ImageTextWrapper>
                 <ImageTextWrapper>
-                    <Image src={chooseSlice2} alt="Pizza image" />
-                    <div>
-                    <CaptionBold>Traditional Pizza #2</CaptionBold>
-                    <Caption>Ham & double cheese</Caption>
-                    </div>
-                    <CaptionBold>$25.00</CaptionBold>
-                    <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
-                        Order
-                    </Button>
+                    <Image src={minutes2} />
+                    <CaptionBold>Expect Our Vehicle</CaptionBold>
+                    <Caption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo</Caption>
                 </ImageTextWrapper>
                 <ImageTextWrapper>
-                    <Image src={chooseSlice3} alt="Pizza image" />
-                    <div>
-                    <CaptionBold>Traditional Pizza #3</CaptionBold>
-                    <Caption>Peperoni & veggies</Caption>
-                    </div>
-                    <CaptionBold>$29.00</CaptionBold>
-                    <Button>
-                        <ArrowCircleRightIcon style={{ "height": "20px" }} />
-                        Order
-                    </Button>
+                    <Image src={minutes3}/>
+                    <CaptionBold>Enjoy Your Pizza</CaptionBold>
+                    <Caption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo</Caption>
                 </ImageTextWrapper>
             </BottomWrapper>
         </Wrapper>
