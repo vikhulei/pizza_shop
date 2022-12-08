@@ -1,50 +1,43 @@
-import { Background, Wrapper, CallToActionWrapper, PizzaMiaWrapper, Heading, SubHeading, OrderButton, IconsTextsWrapper, IconTextContainer, IconWrapper, Icon, TextWrapper, IconHeading, IconSubHeading, PizzaImageContainer, PizzaImage, Counter } from "./GalleryStyle"
-import pizza_mia1 from "../../../assets/home/pizza_mia1.png"
-import catIcon from "../../../assets/home/pizza_mia2.jpg"
-import cheeseIcon from "../../../assets/home/pizza_mia3.jpg"
+import { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, Image, Button } from "./GalleryStyle"
+import pizza1_small from "../../../assets/home/gallery/small/pizza1_small.jpg"
+import pizza2_small from "../../../assets/home/gallery/small/pizza2_small.jpg"
+import pizza3_small from "../../../assets/home/gallery/small/pizza3_small.jpg"
+import pizza4_small from "../../../assets/home/gallery/small/pizza4_small.jpg"
+import pizza5_small from "../../../assets/home/gallery/small/pizza5_small.jpg"
+import pizza6_small from "../../../assets/home/gallery/small/pizza6_small.jpg"
+import pizza7_small from "../../../assets/home/gallery/small/pizza7_small.jpg"
+import pizza8_small from "../../../assets/home/gallery/small/pizza8_small.jpg"
+import pizza1_large from "../../../assets/home/gallery/large/pizza1_large.jpg"
+import pizza2_large from "../../../assets/home/gallery/large/pizza2_large.jpg"
+import pizza3_large from "../../../assets/home/gallery/large/pizza3_large.jpg"
+import pizza4_large from "../../../assets/home/gallery/large/pizza4_large.jpg"
+import pizza5_large from "../../../assets/home/gallery/large/pizza5_large.jpg"
+import pizza6_large from "../../../assets/home/gallery/large/pizza6_large.jpg"
+import pizza7_large from "../../../assets/home/gallery/large/pizza7_large.jpg"
+import pizza8_large from "../../../assets/home/gallery/large/pizza8_large.jpg"
+
 
 const Gallery = () => {
 
   return (
     <Background>
       <Wrapper>
-        <CallToActionWrapper>
-          <PizzaMiaWrapper>
-            <Heading>Slice Slice</Heading>
-            <SubHeading>Your favourite pizza restaurant</SubHeading>
-            <OrderButton>
-              Order Now
-            </OrderButton>
-            {/* <Counter onClick={runCounter1}>{counter1}</Counter> */}
-          </PizzaMiaWrapper>
-          <IconsTextsWrapper>
-            <IconTextContainer>
-              <IconWrapper>
-                <Icon src={catIcon} alt="cat icon" />
-              </IconWrapper>
-              <TextWrapper>
-                <IconHeading>Calories</IconHeading>
-                <IconSubHeading>
-                  Who's counting?
-                </IconSubHeading>
-              </TextWrapper>
-            </IconTextContainer>
-            <IconTextContainer>
-              <IconWrapper>
-                <Icon src={cheeseIcon} alt="cheese icon" />
-              </IconWrapper>
-              <TextWrapper>
-                <IconHeading>Cheese</IconHeading>
-                <IconSubHeading>
-                  Never enough
-                </IconSubHeading>
-              </TextWrapper>
-            </IconTextContainer>
-          </IconsTextsWrapper>
-        </CallToActionWrapper>
-        <PizzaImageContainer>
-          <PizzaImage src={pizza_mia1} alt="pizza mia" />
-        </PizzaImageContainer>
+        <TopWrapper>
+          <ColorHeading>Feast your eyes</ColorHeading>
+          <Heading>Delicious Pizza Gallery</Heading>
+          <SubHeading>watch now, order later</SubHeading>
+        </TopWrapper>
+        <GalleryWrapper>
+          <Image src={pizza1_small} alt="pizza image" />
+          <Image src={pizza2_small} alt="pizza image" />
+          <Image src={pizza3_small} alt="pizza image" />
+          <Image src={pizza4_small} alt="pizza image" />
+          <Image src={pizza5_small} alt="pizza image" />
+          <Image src={pizza6_small} alt="pizza image" />
+          <Image src={pizza7_small} alt="pizza image" />
+          <Image src={pizza8_small} alt="pizza image" />
+        </GalleryWrapper>
+        <Button>Show Me More Pizza</Button>
       </Wrapper>
     </Background>
   )

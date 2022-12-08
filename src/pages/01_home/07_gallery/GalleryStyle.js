@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { colors } from "../../../components/Colors"
-import { WrapperStyled } from "../../../components/ui/StyledComponents"
+import { ButtonStyled, ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
 
 const {background, dark} = colors
 
@@ -9,100 +9,55 @@ const Background = styled.div `
 `
 
 const Wrapper = styled(WrapperStyled) `
-    height: 700px;
+    flex-direction: column;
+    padding: 80px 0;
+    height: 1000px;
+    text-align: center;
     color: white;
 `
 
-const CallToActionWrapper = styled.div `
-    width: 50%;
-    height: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+const TopWrapper = styled.div `
+    text-align: center;
 `
 
-const PizzaMiaWrapper = styled.div `
+
+const ColorHeading = styled(ColorHeadingStyled) `
+    margin-bottom: 20px;
+`
+
+const Heading = styled(HeadingStyled) `
 
 `
 
-const Heading = styled.p `
-    font-family: Fuzzy Bubbles;
-    font-size: 6rem;
+const SubHeading = styled(SubHeadingStyled) `
     font-weight: bold;
-    color: ${dark};
 `
 
-const SubHeading = styled.p `
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    margin-bottom: 30px;
+const GalleryWrapper = styled.div `
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 25px;
 `
 
-const OrderButton = styled.a `
-    padding: 10px 35px;
-    background-color: ${dark};
-    border-radius: 15px;
-    border-top-left-radius: 0px;
-    color: black;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    &:active {
-        background-color: darkred;
+const Image = styled.img `
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    &:hover {
+        transition: 0.4s;
+        cursor: pointer;
+        opacity: 0.5;
     }
 `
 
-const IconsTextsWrapper = styled.div `
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
+const Button = styled(ButtonStyled) `
+    position: relative;
+    margin: 0 auto;
+    width: 270px;
 `
 
-const IconTextContainer = styled.div `
-    display: flex;
-`
 
-const IconWrapper = styled.div `
-
-`
-
-const Icon = styled.img `
-    height: 50px;
-`
-
-const TextWrapper = styled.div `
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.85rem;
-`
-
-const IconHeading = styled.p `
-    margin-bottom: 10px;
-    font-weight: bold;
-`
-    
-const IconSubHeading = styled.p `
-
-`
-
-const PizzaImageContainer = styled.div `
-    
-`
-
-const PizzaImage = styled.img `
-
-`
-
-const Counter = styled.div `
-    margin-top: 20px;
-    width: 200px;
-    height: 60px;
-    background-color: darkred;
-    color: white;
-    text-align: center;
-    line-height: 2;
-    font-size: 2rem;
-`
-
-export { Background, Wrapper, CallToActionWrapper, PizzaMiaWrapper, Heading, SubHeading, OrderButton, IconsTextsWrapper, IconTextContainer, IconWrapper, Icon, TextWrapper, IconHeading, IconSubHeading, PizzaImageContainer, PizzaImage, Counter }
+export { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, Image, Button  }
