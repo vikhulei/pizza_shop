@@ -16,7 +16,7 @@ const WrapperStyled = styled.div `
 const HeadingStyled = styled.h1 `
     font-size: 2.5rem;
     line-height: 1;
-    `
+`
     
 const SubHeadingStyled = styled.h2 `
     font-weight: 200;

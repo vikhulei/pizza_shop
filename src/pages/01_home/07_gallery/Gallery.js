@@ -1,4 +1,5 @@
-import { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, Image, Button } from "./GalleryStyle"
+import { useState } from "react"
+import { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImagePizza, LargeImageContainer, LargeImage, Button } from "./GalleryStyle"
 import pizza1_small from "../../../assets/home/gallery/small/pizza1_small.jpg"
 import pizza2_small from "../../../assets/home/gallery/small/pizza2_small.jpg"
 import pizza3_small from "../../../assets/home/gallery/small/pizza3_small.jpg"
@@ -19,6 +20,14 @@ import pizza8_large from "../../../assets/home/gallery/large/pizza8_large.jpg"
 
 const Gallery = () => {
 
+  const [showImage, setShowImage] = useState(false)
+  const [imageNumber, setImageNumber] = useState("../../../assets/home/gallery/large/pizza1_large.jpg")
+
+  const showLargeImage = (e) => {
+    let idImage = e.target.id
+    setShowImage(true)
+  }
+
   return (
     <Background>
       <Wrapper>
@@ -28,15 +37,52 @@ const Gallery = () => {
           <SubHeading>watch now, order later</SubHeading>
         </TopWrapper>
         <GalleryWrapper>
-          <Image src={pizza1_small} alt="pizza image" />
-          <Image src={pizza2_small} alt="pizza image" />
-          <Image src={pizza3_small} alt="pizza image" />
-          <Image src={pizza4_small} alt="pizza image" />
-          <Image src={pizza5_small} alt="pizza image" />
-          <Image src={pizza6_small} alt="pizza image" />
-          <Image src={pizza7_small} alt="pizza image" />
-          <Image src={pizza8_small} alt="pizza image" />
+          <ImageContainer>
+            <ImagePizza id="one" onClick={showLargeImage}>
+            </ImagePizza>
+            <Image src={pizza1_small} alt="pizza image" />
+          </ImageContainer>
+          <ImageContainer>
+            <ImagePizza>
+            </ImagePizza>
+            <Image src={pizza2_small} alt="pizza image" />
+          </ImageContainer>
+          <ImageContainer>
+            <ImagePizza>
+            </ImagePizza>
+            <Image src={pizza3_small} alt="pizza image" />
+          </ImageContainer>
+          <ImageContainer>
+            <ImagePizza>
+            </ImagePizza>
+            <Image src={pizza4_small} alt="pizza image" />
+          </ImageContainer>
+          <ImageContainer>
+            <ImagePizza>
+            </ImagePizza>
+            <Image src={pizza5_small} alt="pizza image" />
+          </ImageContainer>
+          <ImageContainer>
+            <ImagePizza>
+            </ImagePizza>
+            <Image src={pizza6_small} alt="pizza image" />
+          </ImageContainer>
+          <ImageContainer>
+            <ImagePizza>
+            </ImagePizza>
+            <Image src={pizza7_small} alt="pizza image" />
+          </ImageContainer>
+          <ImageContainer>
+            <ImagePizza>
+            </ImagePizza>
+            <Image src={pizza8_small} alt="pizza image" />
+          </ImageContainer>
         </GalleryWrapper>
+
+        {showImage && <LargeImageContainer>
+            <LargeImage src={imageNumber} />
+        </LargeImageContainer>}
+
         <Button>Show Me More Pizza</Button>
       </Wrapper>
     </Background>
