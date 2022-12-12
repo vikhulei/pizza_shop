@@ -2,6 +2,9 @@ import styled from "styled-components"
 import { colors } from "../../../components/Colors"
 import { ButtonStyled, ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
 import chooseSlice4 from "../../../assets/home/gallery/small_slice1.png"
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 
 const {background, dark} = colors
 
@@ -76,15 +79,43 @@ const LargeImageContainer = styled.div `
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: lightgrey;
-    width: 80%;
-    height: 50%;
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    padding: 15% 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 const LargeImage = styled.img `
+    transition: 1s;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    margin: 0 100px;
+`
+const ArrowContainer = styled.div `
+    position: relative;
+    width: 100px;
+    height: 100px;
+`
+
+const ArrowBack = styled(ArrowBackIosIcon) `
+    position: absolute;
+`
+
+const ArrowForward = styled(ArrowForwardIosIcon) `
+    position: absolute;
+`
+
+
+const ArrowForClick = styled.div `
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
 `
 
 const Button = styled(ButtonStyled) `
@@ -94,4 +125,4 @@ const Button = styled(ButtonStyled) `
 `
 
 
-export { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImagePizza, LargeImageContainer, LargeImage, Button  }
+export { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImagePizza, LargeImageContainer, LargeImage, ArrowContainer, ArrowBack, ArrowForward, ArrowForClick, Button  }
