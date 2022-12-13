@@ -39,8 +39,6 @@ const Gallery = () => {
     let idImage = e.target.id
     let nameImage = e.target.attributes.name.nodeValue
     setImageName(nameImage)
-    // alert(carusel.indexOf(nameImage))
-    // setImageId(carusel.indexOf(nameImage))
     setImageId(idImage)
     setShowImage(true)
   }

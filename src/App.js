@@ -21,6 +21,7 @@ function App() {
       <MinutesAway />
       <Gallery />
       <FunClub />
+      <Gallery />
     </div>
   );
 }
