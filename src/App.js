@@ -9,6 +9,8 @@ import MinutesAway from "./pages/01_home/06_minutesAway/MinutesAway"
 import Gallery from "./pages/01_home/07_gallery/Gallery"
 import FunClub from "./pages/01_home/08_funClub/FunClub"
 import ContactUs from "./components/contactUs/ContactUs";
+import FooterWide from "./components/footerWide/FooterWide";
+import FooterNarrow from "./components/footerNarrow/FooterNarrow";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Gallery />
       <FunClub />
       <ContactUs />
+      <FooterWide />
+      <FooterNarrow />
     </div>
   );
 }

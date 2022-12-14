@@ -5,7 +5,7 @@ import { colors } from "../Colors";
 const {backgroundColor, light} = colors
 
 const Wrapper = styled(WrapperStyled)`
-    height: 730px;
+    height: 610px;
     padding: 100px 0 150px;
     display: flex;
     flex-direction: column;
