@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, {keyframes, css} from "styled-components"
 import { colors } from "../../../components/Colors"
 import { ButtonStyled, ColorHeadingStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents"
 import chooseSlice4 from "../../../assets/home/gallery/small_slice1.png"
@@ -7,6 +7,16 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const {background, dark} = colors
+
+const Animation = keyframes `
+    0% {opacity: 0}
+    20% {opacity: 0}
+    100% {opacity: 1}
+`
+
+const ShowLargeImage = css `
+    animation: ${Animation} 0.6s;
+`
 
 const Background = styled.div `
     background: url(${background});
@@ -75,21 +85,21 @@ const Image = styled.img `
 `
 
 const LargeImageContainer = styled.div `
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0,0,0,0.5);
     width: 100vw;
-    height: 100vh;
-    padding: 15% 20%;
+    height: 125vh;
+    padding: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${(({showImage}) => showImage ? ShowLargeImage : "")}
 `
 
 const LargeImage = styled.img `
-    transition: 1s;
     height: 100%;
     width: 100%;
     object-fit: cover;

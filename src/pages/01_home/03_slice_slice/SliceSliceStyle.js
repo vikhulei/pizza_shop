@@ -9,7 +9,7 @@ const Background = styled.div `
 `
 
 const Wrapper = styled(WrapperStyled) `
-    height: 600px;
+    height: 650px;
     color: white;
 `
 
@@ -26,11 +26,11 @@ const Heading = styled(HeadingStyled) `
 `
 
 const SubHeading = styled(SubHeadingStyled) `
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 `
 
 const Text = styled.p `
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 `
 
 const Button = styled(ButtonStyled) `
@@ -39,7 +39,7 @@ const Button = styled(ButtonStyled) `
 `
 
 const ImageContainer = styled.div `
-    width: 650px;
+    width: 710px;
 `
 
 const Image = styled.img `
@@ -48,8 +48,8 @@ const Image = styled.img `
 
 const BottomWrapper = styled.div `
     position: absolute;
-    bottom: -100px;
-    width: 1000px;
+    bottom: -120px;
+    width: 1050px;
     height: 200px;
     background-color: ${dark};
     border-radius: 30px;

@@ -8,6 +8,7 @@ import OClock from "./pages/01_home/05_oclock/Oclock"
 import MinutesAway from "./pages/01_home/06_minutesAway/MinutesAway"
 import Gallery from "./pages/01_home/07_gallery/Gallery"
 import FunClub from "./pages/01_home/08_funClub/FunClub"
+import ContactUs from "./components/contactUs/ContactUs";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <MinutesAway />
       <Gallery />
       <FunClub />
-      <Gallery />
+      <ContactUs />
     </div>
   );
 }

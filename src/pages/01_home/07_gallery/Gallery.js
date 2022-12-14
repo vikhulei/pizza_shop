@@ -77,7 +77,10 @@ const Gallery = () => {
     setImageName(newImageName)
   }
 
-
+  useEffect(() => {
+    window.addEventListener("scroll", hideLargeImage)
+    return () => window.removeEventListener("scroll", hideLargeImage)
+  }, [])
 
   return (
     <Background>
@@ -134,13 +137,13 @@ const Gallery = () => {
           </ImageContainer>
         </GalleryWrapper>
 
-        {showImage && <LargeImageContainer onClick={hideLargeImage}>
+        {showImage && <LargeImageContainer showImage={showImage} onClick={hideLargeImage}>
           <ArrowContainer>
             <ArrowBack style={{ "fontSize": "3rem" }} />
             <ArrowForClick id="arrowBack"
             onClick={caruselBack} />
           </ArrowContainer>
-          <LargeImage src={imageId} />
+          <LargeImage showImage={showImage} src={imageId} />
           <ArrowContainer>
             <ArrowForward style={{ "fontSize": "3rem" }} />
             <ArrowForClick id="arrowForward"
