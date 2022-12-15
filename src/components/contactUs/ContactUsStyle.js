@@ -1,36 +1,74 @@
 import styled from "styled-components";
 import { ButtonStyled, CaptionBoldStyled, CaptionStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../ui/StyledComponents";
 import { colors } from "../Colors";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
-const {backgroundColor, light} = colors
+
+
+const {dark, light} = colors
 
 const Wrapper = styled(WrapperStyled)`
-    height: 610px;
+    height: 710px;
     padding: 100px 0 150px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    algn-items: center;
+    justify-content: left;
+    gap: 20px;
+`
+const Form = styled.form `
+    height: 100%;
+    width: 50%;
 `
 
-const TopWrapper = styled.div `
-    text-align: center;
+const NameContainer = styled.div `
+    width: 48%;
+    display: inline-block;
+    &:first-of-type {
+        margin-right: 20px;
+    }
+
 `
 
-const BottomWrapper = styled.div `
+const Input = styled.input `
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    height: 40px;
+    border: lightgray 1px solid;
+    margin: 5px 0;
 `
 
-const ImageTextWrapper = styled.div `
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    width: 330px;
-    height: 270px;
+const Label = styled.label `
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    // &:first-of-type {
+    //     margin-top: 0;
+    // }
+    &::after {
+        content: " *";
+        position: relative;
+        top: -3px;
+        color: red;
+        font-size: 0.7rem;
+        
+    }
+`
+
+const Subscript = styled.p `
+    color: gray;
+    font-size: 0.8rem;
+`
+
+const Button = styled(ButtonStyled) `
+    font-size: 0.8rem;
+    width: 145px;
+    height: 45px;
+    margin-top: 10px;
+`
+
+
+const RightWrapper = styled.div `
+    height: 100%;
+    width: 50%;
 `
 
 const Image = styled.img `
@@ -45,12 +83,29 @@ const SubHeading = styled(SubHeadingStyled) `
 
 `
 
-const Caption = styled(CaptionStyled) `
-    line-height: 1.6;
+const MainText = styled.p `
+    color: gray;
+    margin-top: 66px;
 `
 
-const CaptionBold = styled(CaptionBoldStyled) `
+const LargePizza = styled.img `
 
 `
+const SocialWrapper = styled.div `
+    display: flex;
+    margin-top: 10px;
+`
 
-export {Wrapper, TopWrapper, BottomWrapper, ImageTextWrapper, Image, Heading, SubHeading, Caption, CaptionBold }
+const SocialContainer = styled.div `
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: ${dark};
+    margin-right: 10px;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+`
+
+export { Form, NameContainer, Input, Label, Subscript, Button, Wrapper, RightWrapper, Image, Heading, SubHeading, MainText, LargePizza, SocialWrapper, SocialContainer }

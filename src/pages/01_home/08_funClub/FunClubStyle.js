@@ -10,8 +10,8 @@ const WideWrapper = styled.div `
 // background: url(${background});
 
 const Wrapper = styled(WrapperStyled)`
-    height: 630px;
-    padding: 100px 0;
+    height: 530px;
+    padding: 100px 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
