@@ -109,13 +109,12 @@ const MainText = styled.p `
 `
 
 const LargePizza = styled.img `
-    transition: 0.5s;
+    transition: 1s;
     position: absolute;
     right: 0;
     opacity: ${(({largePizzaDrop}) => largePizzaDrop ? "1" : "0")};
     bottom: ${(({largePizzaDrop}) => largePizzaDrop ? "-177px" : "1000px")};
 `
-// dropLargePizza : "")}
 
 const SocialWrapper = styled.div `
     display: flex;
