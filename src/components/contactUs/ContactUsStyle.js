@@ -1,12 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { ButtonStyled, CaptionBoldStyled, CaptionStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../ui/StyledComponents";
 import { colors } from "../Colors";
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
 
+const {dark} = colors
 
-const {dark, light} = colors
+const Animation = keyframes `
+    0% {opacity: 0, bottom: 1000px}
+    100% {opacity: 1, bottom: -177px}
+`
+
+const dropLargePizza = css `
+    animation: ${Animation} 2s;
+`
 
 const Wrapper = styled(WrapperStyled)`
     height: 710px;
@@ -34,15 +40,17 @@ const Input = styled.input `
     height: 40px;
     border: lightgray 1px solid;
     margin: 5px 0;
+    padding: 0 10px;
+    color: grey;
+    &:focus {
+        outline: none;
+    }
 `
 
 const Label = styled.label `
     font-weight: bold;
     display: inline-block;
     margin-top: 10px;
-    // &:first-of-type {
-    //     margin-top: 0;
-    // }
     &::after {
         content: " *";
         position: relative;
@@ -50,6 +58,18 @@ const Label = styled.label `
         color: red;
         font-size: 0.7rem;
         
+    }
+`
+
+const TextArea = styled.textarea `
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    color: grey;
+    border: lightgray 1px solid;
+    &:focus {
+        outline: none;
     }
 `
 
@@ -89,11 +109,18 @@ const MainText = styled.p `
 `
 
 const LargePizza = styled.img `
-
+    transition: 0.5s;
+    position: absolute;
+    right: 0;
+    opacity: ${(({largePizzaDrop}) => largePizzaDrop ? "1" : "0")};
+    bottom: ${(({largePizzaDrop}) => largePizzaDrop ? "-177px" : "1000px")};
 `
+// dropLargePizza : "")}
+
 const SocialWrapper = styled.div `
     display: flex;
     margin-top: 10px;
+    cursor: pointer;
 `
 
 const SocialContainer = styled.div `
@@ -108,4 +135,4 @@ const SocialContainer = styled.div `
     font-size: 1.2rem;
 `
 
-export { Form, NameContainer, Input, Label, Subscript, Button, Wrapper, RightWrapper, Image, Heading, SubHeading, MainText, LargePizza, SocialWrapper, SocialContainer }
+export { Form, NameContainer, Input, Label, TextArea, Subscript, Button, Wrapper, RightWrapper, Image, Heading, SubHeading, MainText, LargePizza, SocialWrapper, SocialContainer }
