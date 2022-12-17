@@ -41,25 +41,25 @@ const Menu = () => {
                     </PizzaNameContainer>
                     <PizzaNameContainer>
                         <PizzaLine>
-                            <MenuItemName>Margherita</MenuItemName>
+                            <MenuItemName>Capricciosa</MenuItemName>
                             <Line></Line>
-                            <Price>$14.99</Price>
+                            <Price>$16.99</Price>
                         </PizzaLine>
                         <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
                     </PizzaNameContainer>
                     <PizzaNameContainer>
                         <PizzaLine>
-                            <MenuItemName>Margherita</MenuItemName>
+                            <MenuItemName>Funghi</MenuItemName>
                             <Line></Line>
-                            <Price>$14.99</Price>
+                            <Price>$15.99</Price>
                         </PizzaLine>
                         <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
                     </PizzaNameContainer>
                     <PizzaNameContainer>
                         <PizzaLine>
-                            <MenuItemName>Margherita</MenuItemName>
+                            <MenuItemName>Quattro Stagioni</MenuItemName>
                             <Line></Line>
-                            <Price>$14.99</Price>
+                            <Price>$24.99</Price>
                         </PizzaLine>
                         <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
                     </PizzaNameContainer>
@@ -67,33 +67,33 @@ const Menu = () => {
                 <ColumnInBottomWrapper>
                     <PizzaNameContainer>
                         <PizzaLine>
-                            <MenuItemName>Margherita</MenuItemName>
+                            <MenuItemName>Marinara</MenuItemName>
                             <Line></Line>
-                            <Price>$14.99</Price>
+                            <Price>$16.99</Price>
                         </PizzaLine>
                         <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
                     </PizzaNameContainer>
                     <PizzaNameContainer>
                         <PizzaLine>
-                            <MenuItemName>Margherita</MenuItemName>
+                            <MenuItemName>Pepperoni</MenuItemName>
                             <Line></Line>
-                            <Price>$14.99</Price>
+                            <Price>$18.99</Price>
                         </PizzaLine>
                         <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
                     </PizzaNameContainer>
                     <PizzaNameContainer>
                         <PizzaLine>
-                            <MenuItemName>Margherita</MenuItemName>
+                            <MenuItemName>Neapolitan</MenuItemName>
                             <Line></Line>
-                            <Price>$14.99</Price>
+                            <Price>$22.99</Price>
                         </PizzaLine>
                         <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
                     </PizzaNameContainer>
                     <PizzaNameContainer>
                         <PizzaLine>
-                            <MenuItemName>Margherita</MenuItemName>
+                            <MenuItemName>Chicago</MenuItemName>
                             <Line></Line>
-                            <Price>$14.99</Price>
+                            <Price>$12.99</Price>
                         </PizzaLine>
                         <MenuItemDescription>Class aptent taciti sociosqu ad litora torquent</MenuItemDescription>
                     </PizzaNameContainer>

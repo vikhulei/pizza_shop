@@ -5,6 +5,8 @@ import { WrapperStyled } from "../../../components/ui/StyledComponents"
 const {background, dark} = colors
 
 const Background = styled.div `
+    position: relative;
+    top: 70px;
     background: url(${background});
 `
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImagePizza, LargeImageContainer, LargeImage, ArrowContainer, ArrowBack, ArrowForward, ArrowForClick, Button } from "./GalleryStyle"
+import { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImageSmallPizza, LargeImageContainer, LargeImage, ArrowContainer, ArrowBack, ArrowForward, ArrowForClick, Button } from "./GalleryStyle"
 import pizza1_small from "../../../assets/home/gallery/small/pizza1_small.jpg"
 import pizza2_small from "../../../assets/home/gallery/small/pizza2_small.jpg"
 import pizza3_small from "../../../assets/home/gallery/small/pizza3_small.jpg"
@@ -92,45 +92,45 @@ const Gallery = () => {
         </TopWrapper>
         <GalleryWrapper>
           <ImageContainer>
-            <ImagePizza id={pizza1_large} name="pizza1_large" onClick={showLargeImage} />
+            <ImageSmallPizza id={pizza1_large} name="pizza1_large" onClick={showLargeImage} />
             <Image src={pizza1_small} alt="pizza image" />
           </ImageContainer>
           <ImageContainer>
-            <ImagePizza id={pizza2_large} name="pizza2_large" onClick={showLargeImage} />
+            <ImageSmallPizza id={pizza2_large} name="pizza2_large" onClick={showLargeImage} />
             <Image src={pizza2_small} alt="pizza image" />
           </ImageContainer>
           <ImageContainer>
-            <ImagePizza id={pizza3_large} 
+            <ImageSmallPizza id={pizza3_large} 
             name="pizza3_large"
             onClick={showLargeImage} />
             <Image src={pizza3_small} alt="pizza image" />
           </ImageContainer>
           <ImageContainer>
-            <ImagePizza id={pizza4_large}
+            <ImageSmallPizza id={pizza4_large}
             name="pizza4_large"
             onClick={showLargeImage} />
             <Image src={pizza4_small} alt="pizza image" />
           </ImageContainer>
           <ImageContainer>
-            <ImagePizza id={pizza5_large}
+            <ImageSmallPizza id={pizza5_large}
             name="pizza5_large"
             onClick={showLargeImage} />
             <Image src={pizza5_small} alt="pizza image" />
           </ImageContainer>
           <ImageContainer>
-            <ImagePizza id={pizza6_large}
+            <ImageSmallPizza id={pizza6_large}
             name="pizza6_large"
             onClick={showLargeImage} />
             <Image src={pizza6_small} alt="pizza image" />
           </ImageContainer>
           <ImageContainer>
-            <ImagePizza id={pizza7_large}
+            <ImageSmallPizza id={pizza7_large}
             name="pizza7_large"
             onClick={showLargeImage} />
             <Image src={pizza7_small} alt="pizza image" />
           </ImageContainer>
           <ImageContainer>
-            <ImagePizza id={pizza8_large}
+            <ImageSmallPizza id={pizza8_large}
             name="pizza8_large"
             onClick={showLargeImage} />
             <Image src={pizza8_small} alt="pizza image" />

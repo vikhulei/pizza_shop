@@ -68,7 +68,7 @@ const Image = styled.img `
     width: 100%;
 `
         
- const ImagePizza = styled.div`
+ const ImageSmallPizza = styled.div`
         position: absolute;
         width: 100%;
         height: 100%;
@@ -135,4 +135,4 @@ const Button = styled(ButtonStyled) `
 `
 
 
-export { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImagePizza, LargeImageContainer, LargeImage, ArrowContainer, ArrowBack, ArrowForward, ArrowForClick, Button  }
+export { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImageSmallPizza, LargeImageContainer, LargeImage, ArrowContainer, ArrowBack, ArrowForward, ArrowForClick, Button  }

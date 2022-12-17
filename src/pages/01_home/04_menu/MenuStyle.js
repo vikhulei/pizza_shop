@@ -2,15 +2,13 @@ import styled from "styled-components";
 import { ButtonStyled, CaptionBoldStyled, CaptionStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents";
 import { colors } from "../../../components/Colors";
 
-const {backgroundColor, light, dark} = colors
+const {dark} = colors
+
 
 const Wrapper = styled(WrapperStyled)`
     height: 1200px;
     padding: 220px 0 0;
     display: block;
-    // flex-direction: column;
-    // // justify-content: space-between;
-    // algn-items: center;
 `
 
 const TopWrapper = styled.div `
@@ -37,7 +35,6 @@ const ImageTextWrapper = styled.div `
     justify-content: space-between;
     padding: 40px 20px 20px;
     height: 250px;
-    // width: 330px;
 `
 
 const Image = styled.img `
@@ -66,25 +63,34 @@ const PizzaNameContainer = styled.div `
 `
 
 const PizzaLine = styled.div `
+    position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin-bottom: 5px;
 `
+
+const MenuItemName = styled(CaptionBoldStyled) `
+    line-height: 1.9;
+    font-size: 1rem;
+    white-space: nowrap;
+`
+
 const Line = styled.div `
     position: relative;
     width: 100%;
     margin: 0 10px;
     &::after {
         position: absolute;
-        top: 50%;
         content: ' ';
         width: 100%;
-        border-top: lightgrey 3px solid;
+        border-top: lightgrey 3px dotted;
     }
 `
 
 const Price = styled.div `
+    position: relative;
     padding: 3px;
     border: solid 4px lightgrey;
     text-align: center;
@@ -97,10 +103,6 @@ const Caption = styled(CaptionStyled) `
 
 const CaptionBold = styled(CaptionBoldStyled) `
 
-`
-
-const MenuItemName = styled(CaptionBoldStyled) `
-    font-size: 1rem;
 `
     
 const MenuItemDescription = styled(CaptionStyled) `
