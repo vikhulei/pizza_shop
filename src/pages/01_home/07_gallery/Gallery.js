@@ -1,44 +1,14 @@
 import { useState, useEffect } from "react"
 import { Background, Wrapper, TopWrapper, ColorHeading, Heading, SubHeading, GalleryWrapper, ImageContainer, Image, ImageSmallPizza, LargeImageContainer, LargeImage, ArrowContainer, ArrowBack, ArrowForward, ArrowForClick, Button } from "./GalleryStyle"
-import pizza1_small from "../../../assets/home/gallery/small/pizza1_small.jpg"
-import pizza2_small from "../../../assets/home/gallery/small/pizza2_small.jpg"
-import pizza3_small from "../../../assets/home/gallery/small/pizza3_small.jpg"
-import pizza4_small from "../../../assets/home/gallery/small/pizza4_small.jpg"
-import pizza5_small from "../../../assets/home/gallery/small/pizza5_small.jpg"
-import pizza6_small from "../../../assets/home/gallery/small/pizza6_small.jpg"
-import pizza7_small from "../../../assets/home/gallery/small/pizza7_small.jpg"
-import pizza8_small from "../../../assets/home/gallery/small/pizza8_small.jpg"
-import pizza1_large from "../../../assets/home/gallery/large/pizza1_large.jpg"
-import pizza2_large from "../../../assets/home/gallery/large/pizza2_large.jpg"
-import pizza3_large from "../../../assets/home/gallery/large/pizza3_large.jpg"
-import pizza4_large from "../../../assets/home/gallery/large/pizza4_large.jpg"
-import pizza5_large from "../../../assets/home/gallery/large/pizza5_large.jpg"
-import pizza6_large from "../../../assets/home/gallery/large/pizza6_large.jpg"
-import pizza7_large from "../../../assets/home/gallery/large/pizza7_large.jpg"
-import pizza8_large from "../../../assets/home/gallery/large/pizza8_large.jpg"
+import { pizzaImages } from "./components/pizzaImages"
 
 const Gallery = () => {
 
   const [showImage, setShowImage] = useState(false)
   const [imageId, setImageId] = useState()
-  const [imageName, setImageName] = useState()
-
-
-  const carusel = [
-    { imName: "pizza1_large", imId: pizza1_large },
-    { imName: "pizza2_large", imId: pizza2_large },
-    { imName: "pizza3_large", imId: pizza3_large },
-    { imName: "pizza4_large", imId: pizza4_large },
-    { imName: "pizza5_large", imId: pizza5_large },
-    { imName: "pizza6_large", imId: pizza6_large },
-    { imName: "pizza7_large", imId: pizza7_large },
-    { imName: "pizza8_large", imId: pizza8_large }
-  ]
 
   const showLargeImage = (e) => {
     let idImage = e.target.id
-    let nameImage = e.target.attributes.name.nodeValue
-    setImageName(nameImage)
     setImageId(idImage)
     setShowImage(true)
   }
@@ -49,32 +19,15 @@ const Gallery = () => {
     }
   }
 
-  const caruselBack = () => {
-    let currentImageIndex = carusel.map(val => val.imName).indexOf(imageName)
+  const carusel = (e) => {
+    let currentImageIndex = pizzaImages.map(val => val.large).indexOf(imageId)
     let newImageIndex
-    if (currentImageIndex === 0) {
-      newImageIndex = currentImageIndex + 7
-    } else {
-      newImageIndex = currentImageIndex - 1
+    if (e.target.id = "arrowBack") {
+      newImageIndex = (currentImageIndex === 0) ? (pizzaImages.length - 1) : (currentImageIndex - 1)
+    } else if (e.target.id = "arrowForward") {
+      newImageIndex = (currentImageIndex === (pizzaImages.length - 1)) ? 0 : (currentImageIndex + 1)
     }
-    let newImageId = carusel[newImageIndex].imId
-    let newImageName = carusel[newImageIndex].imName
-    setImageId(newImageId)
-    setImageName(newImageName)
-  }
-
-  const caruselForward = () => {
-    let currentImageIndex = carusel.map(val => val.imName).indexOf(imageName)
-    let newImageIndex
-    if (currentImageIndex === 7) {
-      newImageIndex = currentImageIndex - 7
-    } else {
-      newImageIndex = currentImageIndex + 1
-    }
-    let newImageId = carusel[newImageIndex].imId
-    let newImageName = carusel[newImageIndex].imName
-    setImageId(newImageId)
-    setImageName(newImageName)
+    setImageId(pizzaImages[newImageIndex].large)
   }
 
   useEffect(() => {
@@ -91,7 +44,42 @@ const Gallery = () => {
           <SubHeading>watch now, order later</SubHeading>
         </TopWrapper>
         <GalleryWrapper>
-          <ImageContainer>
+          {
+            pizzaImages.map((val, idx) =>
+            (
+              <ImageContainer key={idx}>
+                <ImageSmallPizza id={val.large} onClick={showLargeImage} />
+                <Image src={val.small} />
+              </ImageContainer>
+            )
+            )
+          }
+        </GalleryWrapper>
+        {showImage && <LargeImageContainer showImage={showImage} onClick={hideLargeImage}>
+          <ArrowContainer>
+            <ArrowBack style={{ "fontSize": "3rem" }} />
+            <ArrowForClick id="arrowBack"
+              onClick={carusel} />
+          </ArrowContainer>
+          <LargeImage src={imageId} />
+          <ArrowContainer>
+            <ArrowForward style={{ "fontSize": "3rem" }} />
+            <ArrowForClick id="arrowForward"
+              onClick={carusel} />
+          </ArrowContainer>
+        </LargeImageContainer>}
+
+        <Button>Show Me More Pizza</Button>
+      </Wrapper>
+    </Background>
+  )
+}
+
+export default Gallery
+
+
+
+{/* <ImageContainer>
             <ImageSmallPizza id={pizza1_large} name="pizza1_large" onClick={showLargeImage} />
             <Image src={pizza1_small} alt="pizza image" />
           </ImageContainer>
@@ -134,27 +122,35 @@ const Gallery = () => {
             name="pizza8_large"
             onClick={showLargeImage} />
             <Image src={pizza8_small} alt="pizza image" />
-          </ImageContainer>
-        </GalleryWrapper>
+          </ImageContainer> */}
 
-        {showImage && <LargeImageContainer showImage={showImage} onClick={hideLargeImage}>
-          <ArrowContainer>
-            <ArrowBack style={{ "fontSize": "3rem" }} />
-            <ArrowForClick id="arrowBack"
-            onClick={caruselBack} />
-          </ArrowContainer>
-          <LargeImage showImage={showImage} src={imageId} />
-          <ArrowContainer>
-            <ArrowForward style={{ "fontSize": "3rem" }} />
-            <ArrowForClick id="arrowForward"
-            onClick={caruselForward} />
-          </ArrowContainer>
-        </LargeImageContainer>}
 
-        <Button>Show Me More Pizza</Button>
-      </Wrapper>
-    </Background>
-  )
-}
+  // const carusel = [
+  //   { imName: "pizza1_large", imId: pizza1_large },
+  //   { imName: "pizza2_large", imId: pizza2_large },
+  //   { imName: "pizza3_large", imId: pizza3_large },
+  //   { imName: "pizza4_large", imId: pizza4_large },
+  //   { imName: "pizza5_large", imId: pizza5_large },
+  //   { imName: "pizza6_large", imId: pizza6_large },
+  //   { imName: "pizza7_large", imId: pizza7_large },
+  //   { imName: "pizza8_large", imId: pizza8_large }
+  // ]
 
-export default Gallery
+
+  // const [pizza1_small, pizza2_small, pizza3_small, pizza4_small, pizza5_small, pizza6_small, pizza7_small, pizza8_small] = pizzas
+
+
+
+    // const caruselBack = () => {
+  //   let currentImageIndex = pizzas.map(val => val.largeName).indexOf(imageName)
+  //   let newImageIndex
+  //   if (currentImageIndex === 0) {
+  //     newImageIndex = currentImageIndex + 7
+  //   } else {
+  //     newImageIndex = currentImageIndex - 1
+  //   }
+  //   let newImageId = pizzas[newImageIndex].large
+  //   let newImageName = pizzas[newImageIndex].largeName
+  //   setImageId(newImageId)
+  //   setImageName(newImageName)
+  // }
