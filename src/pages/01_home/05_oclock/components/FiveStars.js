@@ -1,4 +1,4 @@
-import { Star } from "./OclockStyle";
+import { Star } from "../OclockStyle";
 
 export const FiveStars = () => {
     return (

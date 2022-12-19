@@ -1,8 +1,8 @@
-import { Quote, Caption, AuthorWrapper, StarWrapper, Star, DotsWrapper, Dot, Image, NameStarWrapper } from "./OclockStyle"
-import { FiveStars } from "./FiveStars"
-import clock2 from "../../../assets/home/clock2.jpg"
-import clock3 from "../../../assets/home/clock3.jpg"
-import clock4 from "../../../assets/home/clock4.jpg"
+import { Quote, Caption, AuthorWrapper, StarWrapper, Star, DotsWrapper, Dot, Image, NameStarWrapper } from "../OclockStyle"
+import { FiveStars } from "../components/FiveStars"
+import clock2 from "../../../../assets/home/clock2.jpg"
+import clock3 from "../../../../assets/home/clock3.jpg"
+import clock4 from "../../../../assets/home/clock4.jpg"
 
 export const QuoteOne = () => {
     return (

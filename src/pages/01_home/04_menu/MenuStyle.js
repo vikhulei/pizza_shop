@@ -40,6 +40,7 @@ const ImageTextWrapper = styled.div `
 const Image = styled.img `
     height: 100%;
 `
+
 const TextWrapper = styled.div `
     padding: 35px 0 35px 10px;
     display: flex;

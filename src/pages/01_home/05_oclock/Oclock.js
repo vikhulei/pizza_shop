@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import { Background, Wrapper, LeftSideWrapper, ColorHeading, Heading, SubHeading, QuoteBox, QuoteWrapper, QuoteContainer, DotsWrapper, Dot, Button, RightSideWrapper, PizzaSliceTop, PizzaSliceRight, PizzaSliceBottom } from "./OclockStyle"
-import { QuoteOne, QuoteTwo, QuoteThree } from "./Quote"
+import { QuoteOne, QuoteTwo, QuoteThree } from "./components/Quote"
 import clock1a from "../../../assets/home/clock1a.png"
 import clock1b from "../../../assets/home/clock1b.png"
 import clock1c from "../../../assets/home/clock1c.png"
