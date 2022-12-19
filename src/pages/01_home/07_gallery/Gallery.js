@@ -8,8 +8,7 @@ const Gallery = () => {
   const [imageId, setImageId] = useState()
 
   const showLargeImage = (e) => {
-    let idImage = e.target.id
-    setImageId(idImage)
+    setImageId(e.target.id)
     setShowImage(true)
   }
 
@@ -76,81 +75,3 @@ const Gallery = () => {
 }
 
 export default Gallery
-
-
-
-{/* <ImageContainer>
-            <ImageSmallPizza id={pizza1_large} name="pizza1_large" onClick={showLargeImage} />
-            <Image src={pizza1_small} alt="pizza image" />
-          </ImageContainer>
-          <ImageContainer>
-            <ImageSmallPizza id={pizza2_large} name="pizza2_large" onClick={showLargeImage} />
-            <Image src={pizza2_small} alt="pizza image" />
-          </ImageContainer>
-          <ImageContainer>
-            <ImageSmallPizza id={pizza3_large} 
-            name="pizza3_large"
-            onClick={showLargeImage} />
-            <Image src={pizza3_small} alt="pizza image" />
-          </ImageContainer>
-          <ImageContainer>
-            <ImageSmallPizza id={pizza4_large}
-            name="pizza4_large"
-            onClick={showLargeImage} />
-            <Image src={pizza4_small} alt="pizza image" />
-          </ImageContainer>
-          <ImageContainer>
-            <ImageSmallPizza id={pizza5_large}
-            name="pizza5_large"
-            onClick={showLargeImage} />
-            <Image src={pizza5_small} alt="pizza image" />
-          </ImageContainer>
-          <ImageContainer>
-            <ImageSmallPizza id={pizza6_large}
-            name="pizza6_large"
-            onClick={showLargeImage} />
-            <Image src={pizza6_small} alt="pizza image" />
-          </ImageContainer>
-          <ImageContainer>
-            <ImageSmallPizza id={pizza7_large}
-            name="pizza7_large"
-            onClick={showLargeImage} />
-            <Image src={pizza7_small} alt="pizza image" />
-          </ImageContainer>
-          <ImageContainer>
-            <ImageSmallPizza id={pizza8_large}
-            name="pizza8_large"
-            onClick={showLargeImage} />
-            <Image src={pizza8_small} alt="pizza image" />
-          </ImageContainer> */}
-
-
-  // const carusel = [
-  //   { imName: "pizza1_large", imId: pizza1_large },
-  //   { imName: "pizza2_large", imId: pizza2_large },
-  //   { imName: "pizza3_large", imId: pizza3_large },
-  //   { imName: "pizza4_large", imId: pizza4_large },
-  //   { imName: "pizza5_large", imId: pizza5_large },
-  //   { imName: "pizza6_large", imId: pizza6_large },
-  //   { imName: "pizza7_large", imId: pizza7_large },
-  //   { imName: "pizza8_large", imId: pizza8_large }
-  // ]
-
-
-  // const [pizza1_small, pizza2_small, pizza3_small, pizza4_small, pizza5_small, pizza6_small, pizza7_small, pizza8_small] = pizzas
-
-
-
-    // const caruselBack = () => {
-  //   let currentImageIndex = pizzas.map(val => val.largeName).indexOf(imageName)
-  //   let newImageIndex
-  //   if (currentImageIndex === 0) {
-  //     newImageIndex = currentImageIndex + 7
-  //   } else {
-  //     newImageIndex = currentImageIndex - 1
-  //   }
-  //   let newImageId = pizzas[newImageIndex].large
-  //   let newImageName = pizzas[newImageIndex].largeName
-  //   setImageId(newImageId)
-  //   setImageName(newImageName)
-  // }
