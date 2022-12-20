@@ -29,7 +29,9 @@ const PizzaMiaWrapper = styled.div `
 
 const Heading = styled.p `
     font-family: Fuzzy Bubbles;
-    font-size: 6rem;
+    font-size: 6vw;
+    font-size: 4rem;
+    font-size: min(max(4rem, 6vw), 6rem);
     font-weight: bold;
     color: ${dark};
 `
@@ -89,11 +91,11 @@ const IconSubHeading = styled.p `
 `
 
 const PizzaImageContainer = styled.div `
-    
+    max-width: 40vw;
 `
 
 const PizzaImage = styled.img `
-
+    width: 100%;
 `
 
 export { Background, Wrapper, CallToActionWrapper, PizzaMiaWrapper, Heading, SubHeading, OrderButton, IconsTextsWrapper, IconTextContainer, IconWrapper, Icon, TextWrapper, IconHeading, IconSubHeading, PizzaImageContainer, PizzaImage }
