@@ -8,6 +8,9 @@ const Background = styled.div `
     position: relative;
     top: 70px;
     background: url(${background});
+    @media screen and (max-width: 800px) {
+        top: 0;
+    }
 `
 
 const Wrapper = styled(WrapperStyled) `

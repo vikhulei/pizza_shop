@@ -10,6 +10,9 @@ const Background = styled.div `
     width: 100%;
     background-color: white;
     z-index: 100;
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 `
 
 const Wrapper = styled(WrapperStyled) `
