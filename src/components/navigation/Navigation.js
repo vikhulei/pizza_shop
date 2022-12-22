@@ -1,4 +1,4 @@
-import { Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper } from "./NavigationStyle"
+import { Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper, Logo } from "./NavigationStyle"
 import logo from "../../assets/logo.png"
 
 const Navigation = () => {
@@ -11,7 +11,7 @@ const Navigation = () => {
                     <MenuItem>ABOUT</MenuItem>
                 </MenuItemsWrapper>
                 <LogoWrapper>
-                    <img src={logo} alt="logo image" style={{ "width": "230px" }} />
+                    <Logo src={logo} alt="logo image"/>
                 </LogoWrapper>
                 <MenuItemsWrapper>
                     <MenuItem>GALLERY</MenuItem>

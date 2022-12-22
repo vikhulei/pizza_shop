@@ -10,20 +10,26 @@ const Background = styled.div `
     width: 100%;
     background-color: white;
     z-index: 100;
-    @media screen and (max-width: 800px) {
-        display: none;
-    }
+    // @media screen and (max-width: 800px) {
+    //     display: none;
+    // }
 `
 
 const Wrapper = styled(WrapperStyled) `
     position: relative;
     padding: 0 100px;
+    @media screen and (max-width: 800px) {
+        padding: 0;
+    }    
 `
     
 const MenuItemsWrapper = styled.div `
     display: flex;
     justify-content: space-between;
     width: 300px;
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 `
 
 const LogoWrapper = styled.div `
@@ -34,6 +40,13 @@ const LogoWrapper = styled.div `
     &:hover {
         opacity: 0.6;
     }
+    @media screen and (max-width: 800px) {
+        text-align: left;
+    }
+`
+
+const Logo = styled.img `
+    width: 200px;
 `
 
 const MenuItem = styled.p `
@@ -46,4 +59,4 @@ const MenuItem = styled.p `
     }
 `
 
-export {Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper}
+export {Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper, Logo}
