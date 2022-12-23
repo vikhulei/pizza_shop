@@ -8,7 +8,6 @@ const Navigation = () => {
 
     const toggleMenu = () => {
         setShowMenu(!showMenu)
-        console.log(showMenu)
     }
 
     return (

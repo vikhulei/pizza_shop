@@ -6,8 +6,11 @@ import {colors} from "../Colors"
 const {dark} = colors
 
 const Background = styled.div `
-    position: fixed;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 100%;
+    height: 65px;
     background-color: white;
     z-index: 100;
 `
@@ -95,7 +98,7 @@ const MenuItem = styled.p `
         color: ${dark};
     }
     @media screen and (max-width: 1000px) {
-        font-weight: 200;
+        font-weight: bold;
         text-transform: none;
     }
 `

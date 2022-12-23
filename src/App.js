@@ -1,4 +1,5 @@
 import "./App.css"
+import { MainWrapper, ComponentsWrapper } from "./components/ui/Wrappers"
 import Navigation from "./components/navigation/Navigation"
 import PizzaMia from "./pages/01_home/01_pizzamia/PizzaMia";
 import ChooseSlice from "./pages/01_home/02_choose_slice/ChooseSlice";
@@ -14,20 +15,22 @@ import FooterNarrow from "./components/footerNarrow/FooterNarrow";
 
 function App() {
   return (
-    <div>
+    <MainWrapper>
       <Navigation />
-      <PizzaMia />
-      <ChooseSlice />
-      <SliceSlice />
-      <Menu />
-      <OClock />
-      <MinutesAway />
-      <Gallery />
-      <FunClub />
-      <ContactUs />
-      <FooterWide />
-      <FooterNarrow />
-    </div>
+      <ComponentsWrapper>
+        <PizzaMia />
+        <ChooseSlice />
+        <SliceSlice />
+        <Menu />
+        <OClock />
+        <MinutesAway />
+        <Gallery />
+        <FunClub />
+        <ContactUs />
+        <FooterWide />
+        <FooterNarrow />
+      </ComponentsWrapper>
+    </MainWrapper>
   );
 }
 
