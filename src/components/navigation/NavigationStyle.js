@@ -10,16 +10,18 @@ const Background = styled.div `
     width: 100%;
     background-color: white;
     z-index: 100;
-    // @media screen and (max-width: 800px) {
-    //     display: none;
-    // }
 `
 
 const Wrapper = styled(WrapperStyled) `
-    position: relative;
     padding: 0 100px;
-    @media screen and (max-width: 800px) {
-        padding: 0;
+    @media screen and (max-width: 1000px) {
+        position: absolute;
+        width: 100vw;
+        top: 65px;
+        padding: 0 0 0px 80px;
+        background-color: white;
+        opacity: 0.9;
+        flex-direction: column;
     }    
 `
     
@@ -27,8 +29,13 @@ const MenuItemsWrapper = styled.div `
     display: flex;
     justify-content: space-between;
     width: 300px;
-    @media screen and (max-width: 800px) {
-        display: none;
+    @media screen and (max-width: 1000px) {
+        display: ${(({showMenu}) => showMenu ? "flex" : "none")};
+        width: 100%;
+        flex-direction: column;
+        height: 200px;
+        width: 100vw;
+        justify-content: space-around;
     }
 `
 
@@ -40,8 +47,14 @@ const LogoWrapper = styled.div `
     &:hover {
         opacity: 0.6;
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
+        position: absolute;
+        left: 0;
+        padding-left: 25px;
+        top: -65px;
         text-align: left;
+        width: 100vw;
+        background-color: white;
     }
 `
 
@@ -49,14 +62,42 @@ const Logo = styled.img `
     width: 200px;
 `
 
-const MenuItem = styled.p `
-    font-weight: bold;
+const HamburgerOpen = styled.div `
+    position: absolute;
+    right: 30px;
+    top: -65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
     font-size: 0.9rem;
-    letter-spacing: 0.1rem;
+    font-weight: bold;
     cursor: pointer;
+    user-select: none;
     &:hover {
         color: ${dark};
     }
 `
 
-export {Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper, Logo}
+const HamburgerClose = styled.div `
+
+`
+
+
+const MenuItem = styled.p `
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: fit-content;
+    &:hover {
+        color: ${dark};
+    }
+    @media screen and (max-width: 1000px) {
+        font-weight: 200;
+        text-transform: none;
+    }
+`
+
+export {Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper, Logo, HamburgerOpen, HamburgerClose }

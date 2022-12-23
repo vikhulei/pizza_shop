@@ -6,7 +6,7 @@ const {background, dark} = colors
 
 const Background = styled.div `
     position: relative;
-    top: 70px;
+    top: 65px;
     background: url(${background});
     // @media screen and (max-width: 800px) {
     //     top: 0;
