@@ -18,8 +18,12 @@ const Navigation = () => {
     }
 
     useEffect(() => {
-        window.addEventListener("click", () => hideMenu())
-        return () => window.removeEventListener("click", () => hideMenu() )
+        window.addEventListener("click", () => { alert(showMenu)
+            if(showMenu) {
+            setShowMenu(false)
+        }}
+        )
+        return () => window.removeEventListener("click", () => setShowMenu(false) )
     }, [])
 
     return (
