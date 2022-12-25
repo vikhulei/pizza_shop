@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import { WideWrapper, Wrapper, TopWrapper, BottomWrapper, Heading, SubHeading, Image, CounterWrapper, CounterTextContainer, HeadingCounter, CaptionCounter } from "./FunClubStyle";
+import { WideWrapper, Wrapper, TopWrapper, BottomWrapper, Heading, SubHeading, Image, CounterWrapper, CounterTextContainer, HeadingCounter, CaptionCounter } from "./FanClubStyle";
 import chooseSlice4 from "../../../assets/home/chooseSlice4.png"
 import useCounter from "../../../util/useCounter"
 import useSliceAnimation from "../../../util/useSliceAnimation";
 
 
-const FunClub = () => {
+const FanClub = () => {
 
     const counterRef = useRef()
     const startCounter = useSliceAnimation(counterRef)
@@ -40,4 +40,4 @@ const FunClub = () => {
     )
 }
 
-export default FunClub
+export default FanClub

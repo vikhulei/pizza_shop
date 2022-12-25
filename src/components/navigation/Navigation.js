@@ -22,7 +22,7 @@ const Navigation = () => {
                 <MenuItemsWrapper showMenu={showMenu}>
                     <MenuItem to="/home">Home</MenuItem>
                     <MenuItem to="/menu">Menu</MenuItem>
-                    <MenuItem>About</MenuItem>
+                    <MenuItem to="/about">About</MenuItem>
                 </MenuItemsWrapper>
                 <LogoWrapper showMenu={showMenu}>
                     <Logo src={logo} alt="logo image"/>

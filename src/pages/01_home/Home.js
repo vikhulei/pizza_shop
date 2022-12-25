@@ -6,7 +6,7 @@ import Menu from "./04_menu/Menu"
 import OClock from "./05_oclock/Oclock"
 import MinutesAway from "./06_minutesAway/MinutesAway"
 import Gallery from "./07_gallery/Gallery"
-import FunClub from "./08_funClub/FunClub"
+import FanClub from "./08_fanClub/FanClub"
 import ContactUs from "../../components/contactUs/ContactUs";
 import FooterWide from "../../components/footerWide/FooterWide";
 import FooterNarrow from "../../components/footerNarrow/FooterNarrow";
@@ -21,7 +21,7 @@ const Home = () => {
         <OClock />
         <MinutesAway />
         <Gallery />
-        <FunClub />
+        <FanClub />
         <ContactUs />
         <FooterWide />
         <FooterNarrow />
