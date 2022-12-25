@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { ComponentsWrapper } from "../../components/ui/Wrappers";
 import PizzaMia from "./01_pizzamia/PizzaMia";
 import ChooseSlice from "./02_choose_slice/ChooseSlice";
 import SliceSlice from "./03_slice_slice/SliceSlice";
@@ -11,18 +12,9 @@ import ContactUs from "../../components/contactUs/ContactUs";
 import FooterWide from "../../components/footerWide/FooterWide";
 import FooterNarrow from "../../components/footerNarrow/FooterNarrow";
 
-export const HomeWrapper = styled.div `
-    position: absolute;
-    overflow: auto;
-    right: 0;
-    left: 0;
-    top: 0px;
-    bottom: 0;
-`
-
 const Home = () => {
   return (
-    <HomeWrapper>
+    <ComponentsWrapper>
         <PizzaMia />
         <ChooseSlice />
         <SliceSlice />
@@ -34,7 +26,7 @@ const Home = () => {
         <ContactUs />
         <FooterWide />
         <FooterNarrow />
-    </HomeWrapper>
+    </ComponentsWrapper>
   )
 }
 
