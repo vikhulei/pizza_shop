@@ -22,7 +22,7 @@ const Wrapper = styled(WrapperStyled) `
         flex-direction: column-reverse;
         max-height: 2000px;
         height: auto;
-        padding: 80px 0;
+        padding: 60px 30px 0;
         // background-color: red;
     }
 `

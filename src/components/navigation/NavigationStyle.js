@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import { WrapperStyled } from "../ui/StyledComponents"
 import {colors} from "../Colors"
 
@@ -87,7 +88,9 @@ const HamburgerClose = styled.div `
 `
 
 
-const MenuItem = styled.p `
+const MenuItem = styled(Link) `
+    text-decoration: none;
+    color: black;
     font-weight: bold;
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
