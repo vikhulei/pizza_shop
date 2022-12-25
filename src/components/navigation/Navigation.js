@@ -30,7 +30,7 @@ const Navigation = () => {
                 <MenuItemsWrapper showMenu={showMenu}>
                     <MenuItem to="/gallery">Gallery</MenuItem>
                     <MenuItem>Blog</MenuItem>
-                    <MenuItem>Contact</MenuItem>
+                    <MenuItem to="/contact">Contact</MenuItem>
                 </MenuItemsWrapper>
             </Wrapper>
         </Background>

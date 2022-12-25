@@ -6,6 +6,7 @@ import Home from "./pages/01_home/Home";
 import MenuComponent from "./pages/02_menu/Menu";
 import About from "./pages/03_about/About";
 import GalleryComponent from "./pages/04_gallery/Gallery";
+import Contact from "./pages/06_contact/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/menu" element={<MenuComponent />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<GalleryComponent/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </Router>
     </MainWrapperStyle>
