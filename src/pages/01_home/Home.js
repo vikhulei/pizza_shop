@@ -1,4 +1,3 @@
-import styled from "styled-components"
 import { ComponentsWrapper } from "../../components/ui/Wrappers";
 import PizzaMia from "./01_pizzamia/PizzaMia";
 import ChooseSlice from "./02_choose_slice/ChooseSlice";

@@ -21,7 +21,7 @@ const Navigation = () => {
                 <HamburgerOpen ref={menuRef} onClick={toggleMenu}>MENU</HamburgerOpen>
                 <MenuItemsWrapper showMenu={showMenu}>
                     <MenuItem to="/home">Home</MenuItem>
-                    <MenuItem>Menu</MenuItem>
+                    <MenuItem to="/menu">Menu</MenuItem>
                     <MenuItem>About</MenuItem>
                 </MenuItemsWrapper>
                 <LogoWrapper showMenu={showMenu}>
