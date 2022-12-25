@@ -1,35 +1,24 @@
-import { useState, useEffect } from "react"
-import { Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper, Logo, HamburgerOpen, HamburgerClose } from "./NavigationStyle"
+import { useState, useRef } from "react"
+import { Background, Wrapper, MenuItemsWrapper, MenuItem, LogoWrapper, Logo, HamburgerOpen } from "./NavigationStyle"
 import logo from "../../assets/logo.png"
+import { useHideMenu } from "../../util/useHideMenu"
 
 const Navigation = () => {
 
     const [showMenu, setShowMenu] = useState(false)
-
+    const menuRef = useRef()
+    
+    
     const toggleMenu = () => {
         setShowMenu(!showMenu)
     }
-
-    const hideMenu = (e) => {
-        console.log(e)
-        if(showMenu) {
-            setShowMenu(false)
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener("click", () => { alert(showMenu)
-            if(showMenu) {
-            setShowMenu(false)
-        }}
-        )
-        return () => window.removeEventListener("click", () => setShowMenu(false) )
-    }, [])
+    
+    useHideMenu({menuRef, setShowMenu})
 
     return (
         <Background>
             <Wrapper>
-                <HamburgerOpen onClick={toggleMenu}>MENU</HamburgerOpen>
+                <HamburgerOpen ref={menuRef} onClick={toggleMenu}>MENU</HamburgerOpen>
                 <MenuItemsWrapper showMenu={showMenu}>
                     <MenuItem to="/home">Home</MenuItem>
                     <MenuItem>Menu</MenuItem>

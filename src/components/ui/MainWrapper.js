@@ -9,6 +9,8 @@ export const MainWrapperStyle = styled.div `
 `
 
 export const MainWrapper = ({children}) => {
+
+
     return (
         <MainWrapperStyle>
             {children}
