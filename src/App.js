@@ -5,6 +5,7 @@ import { MainWrapperStyle } from "./components/ui/Wrappers"
 import Home from "./pages/01_home/Home";
 import MenuComponent from "./pages/02_menu/Menu";
 import About from "./pages/03_about/About";
+import GalleryComponent from "./pages/04_gallery/Gallery";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<MenuComponent />} />
           <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<GalleryComponent/>} />
         </Routes>
       </Router>
     </MainWrapperStyle>

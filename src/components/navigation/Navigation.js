@@ -28,7 +28,7 @@ const Navigation = () => {
                     <Logo src={logo} alt="logo image"/>
                 </LogoWrapper>
                 <MenuItemsWrapper showMenu={showMenu}>
-                    <MenuItem>Gallery</MenuItem>
+                    <MenuItem to="/gallery">Gallery</MenuItem>
                     <MenuItem>Blog</MenuItem>
                     <MenuItem>Contact</MenuItem>
                 </MenuItemsWrapper>
