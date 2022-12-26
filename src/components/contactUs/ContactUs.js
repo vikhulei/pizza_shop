@@ -9,7 +9,8 @@ import useSliceAnimation from "../../util/useSliceAnimation";
 const ContactUs = () => {
 
     const socialRef = useRef()
-    const largePizzaDrop = useSliceAnimation(socialRef)
+    const largePizzaDrop = true
+    // const largePizzaDrop = useSliceAnimation(socialRef)
 
     return (
         <Wrapper>

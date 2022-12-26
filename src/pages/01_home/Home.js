@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { ComponentsWrapper } from "../../components/ui/Wrappers";
 import PizzaMia from "./01_pizzamia/PizzaMia";
 import ChooseSlice from "./02_choose_slice/ChooseSlice";
@@ -12,13 +13,18 @@ import FooterWide from "../../components/footerWide/FooterWide";
 import FooterNarrow from "../../components/footerNarrow/FooterNarrow";
 
 const Home = () => {
+
+  const compsRef = useRef()
+  // const compsRef = "useRef()"
+  // const compsWrapper = compsRef
+
   return (
-    <ComponentsWrapper>
+    <ComponentsWrapper ref={compsRef}>
         <PizzaMia />
         <ChooseSlice />
         <SliceSlice />
         <Menu />
-        <OClock />
+        <OClock compsRef={compsRef}/>
         <MinutesAway />
         <Gallery />
         <FanClub />

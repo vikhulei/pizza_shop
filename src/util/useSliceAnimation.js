@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 
-const useSliceAnimation = (sliceTop) => {
+const useSliceAnimation = ({sliceTop, compsRef}) => {
+
     const [animateSlices, setAnimateSlices] = useState(false)
 
     const detectSlice = () => {
@@ -15,8 +16,9 @@ const useSliceAnimation = (sliceTop) => {
     }
 
     useEffect(() => {
-        window.addEventListener("scroll", detectSlice)
-        return () => window.removeEventListener("scroll", detectSlice)
+        const componentsWrapper = compsRef.compsRef.current        
+        componentsWrapper.addEventListener("scroll", detectSlice)
+        return () => componentsWrapper.removeEventListener("scroll", detectSlice)
     }, [])
 
     return animateSlices

@@ -8,7 +8,8 @@ import useSliceAnimation from "../../../util/useSliceAnimation";
 const FanClub = () => {
 
     const counterRef = useRef()
-    const startCounter = useSliceAnimation(counterRef)
+    const startCounter = true
+    // const startCounter = useSliceAnimation(counterRef)
     const [counter1, counter2, counter3] = useCounter(startCounter)
 
     return (

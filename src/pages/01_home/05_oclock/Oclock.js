@@ -7,8 +7,8 @@ import clock1c from "../../../assets/home/clock1c.png"
 import useSliceAnimation from "../../../util/useSliceAnimation"
 
 
-const OClock = () => {
-  
+const OClock = (compsRef) => {
+
   const quoteContainer = useRef()
   const quoteBox = useRef()
   const quoteOne = useRef()
@@ -18,8 +18,8 @@ const OClock = () => {
   const dotTwo = useRef()
   const dotThree = useRef()
   const sliceTop = useRef(null)
-  
-  const showSlice = useSliceAnimation(sliceTop)
+
+  const showSlice = useSliceAnimation({sliceTop, compsRef})
 
   const dotsColoring = () => {
     const observer = new IntersectionObserver(entries => {
@@ -70,7 +70,7 @@ useEffect(() => {
     <Background>
       <Wrapper>
         <LeftSideWrapper>
-          <ColorHeading >It's pizza o'clock</ColorHeading>
+          <ColorHeading>It's pizza o'clock</ColorHeading>
           <Heading>We're Pizza</Heading>
           <SubHeading>& we can make everyone happy</SubHeading>
           <QuoteBox ref={quoteBox}>
