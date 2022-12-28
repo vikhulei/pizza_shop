@@ -5,11 +5,10 @@ import useCounter from "../../../util/useCounter"
 import useSliceAnimation from "../../../util/useSliceAnimation";
 
 
-const FanClub = () => {
+const FanClub = (compsRef) => {
 
-    const counterRef = useRef()
-    const startCounter = true
-    // const startCounter = useSliceAnimation(counterRef)
+    const startAnimate = useRef(null)
+    const startCounter = useSliceAnimation({startAnimate, compsRef})
     const [counter1, counter2, counter3] = useCounter(startCounter)
 
     return (
@@ -21,7 +20,7 @@ const FanClub = () => {
                     <Image src={chooseSlice4} style={{ "maxWidth": "65px" }} alt="pizza slice" />
                 </TopWrapper>
                 <BottomWrapper>
-                    <CounterWrapper ref={counterRef}>
+                    <CounterWrapper ref={startAnimate}>
                         <CounterTextContainer>
                             <HeadingCounter>{counter1}+</HeadingCounter>
                             <CaptionCounter>Visitors per day</CaptionCounter>

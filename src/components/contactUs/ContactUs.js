@@ -6,11 +6,11 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import useSliceAnimation from "../../util/useSliceAnimation";
 
-const ContactUs = () => {
+const ContactUs = (compsRef) => {
 
-    const socialRef = useRef()
-    const largePizzaDrop = true
-    // const largePizzaDrop = useSliceAnimation(socialRef)
+    const startAnimate = useRef(null)
+    const largePizzaDrop = useSliceAnimation({startAnimate, compsRef})
+    // const largePizzaDrop = true
 
     return (
         <Wrapper>
@@ -38,7 +38,7 @@ const ContactUs = () => {
                 <Image src={chooseSlice4} alt="slice" style={{ "width": "65px", "marginTop": "10px" }} />
                 <MainText>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu.</MainText>
                 <MainText>Get in touch on social media:</MainText>
-                <SocialWrapper ref={socialRef}>
+                <SocialWrapper ref={startAnimate}>
                 <SocialContainer>f </SocialContainer>
                 <SocialContainer><TwitterIcon /></SocialContainer>
                 <SocialContainer><InstagramIcon/></SocialContainer>

@@ -17,9 +17,9 @@ const OClock = (compsRef) => {
   const dotOne = useRef()
   const dotTwo = useRef()
   const dotThree = useRef()
-  const sliceTop = useRef(null)
+  const startAnimate = useRef(null)
 
-  const showSlice = useSliceAnimation({sliceTop, compsRef})
+  const showSlice = useSliceAnimation({startAnimate, compsRef})
 
   const dotsColoring = () => {
     const observer = new IntersectionObserver(entries => {
@@ -93,7 +93,7 @@ useEffect(() => {
           </DotsWrapper>
           <Button>Make a Reservation</Button>
         </LeftSideWrapper>
-        <RightSideWrapper ref={sliceTop}>
+        <RightSideWrapper ref={startAnimate}>
           <PizzaSliceTop showSlice={showSlice} src={clock1a} alt="pizza slice"/>
           <PizzaSliceRight showSlice={showSlice} src={clock1b} alt="pizza slice"/>
           <PizzaSliceBottom showSlice={showSlice} src={clock1c} alt="pizza slice"/>

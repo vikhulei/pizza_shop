@@ -15,8 +15,6 @@ import FooterNarrow from "../../components/footerNarrow/FooterNarrow";
 const Home = () => {
 
   const compsRef = useRef()
-  // const compsRef = "useRef()"
-  // const compsWrapper = compsRef
 
   return (
     <ComponentsWrapper ref={compsRef}>
@@ -27,8 +25,8 @@ const Home = () => {
         <OClock compsRef={compsRef}/>
         <MinutesAway />
         <Gallery />
-        <FanClub />
-        <ContactUs />
+        <FanClub compsRef={compsRef}/>
+        <ContactUs compsRef={compsRef}/>
         <FooterWide />
         <FooterNarrow />
     </ComponentsWrapper>
