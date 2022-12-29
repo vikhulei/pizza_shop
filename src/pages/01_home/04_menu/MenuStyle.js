@@ -7,7 +7,7 @@ const {dark} = colors
 
 const Wrapper = styled(WrapperStyled)`
     height: 1200px;
-    padding: 220px 0 0;
+    // padding: 220px 0 0;
     display: block;
 `
 

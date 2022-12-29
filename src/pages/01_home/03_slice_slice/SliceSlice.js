@@ -1,4 +1,4 @@
-import { Background, Wrapper, LeftWrapper, ColorHeading, Heading, SubHeading, Text, Button, ImageContainer, Image, BottomWrapper, IconTextContainer, Icon, CaptionBold, Caption } from "./SliceSliceStyle"
+import { Background, Wrapper, TopWrapper, LeftWrapper, ColorHeading, Heading, SubHeading, Text, Button, RightWrapper, Image, BottomWrapper, IconTextContainer, Icon, CaptionBold, Caption } from "./SliceSliceStyle"
 import slice1 from "../../../assets/home/slice1.jpg"
 import slice2 from "../../../assets/home/slice2.jpg"
 import slice3 from "../../../assets/home/slice3.jpg"
@@ -11,17 +11,19 @@ const SliceSlice = () => {
   return (
     <Background>
       <Wrapper>
-        <LeftWrapper>
-          <ColorHeading>Slice, slice baby</ColorHeading>
-          <Heading>Pizza Magicians</Heading>
-          <SubHeading>world-class chefs</SubHeading>
-          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</Text>
-          <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</Text>
-          <Button>Find Out More</Button>
-        </LeftWrapper>
-        <ImageContainer>
-          <Image src={slice1} alt="pizzayola" />
-        </ImageContainer>
+        <TopWrapper>
+          <LeftWrapper>
+            <ColorHeading>Slice, slice baby</ColorHeading>
+            <Heading>Pizza Magicians</Heading>
+            <SubHeading>world-class chefs</SubHeading>
+            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</Text>
+            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</Text>
+            <Button>Find Out More</Button>
+          </LeftWrapper>
+          <RightWrapper>
+            <Image src={slice1} alt="pizzayola" />
+          </RightWrapper>
+        </TopWrapper>
         <BottomWrapper>
           <IconTextContainer>
             <Icon src={slice2} alt="fresh" />

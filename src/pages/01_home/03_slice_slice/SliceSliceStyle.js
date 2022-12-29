@@ -11,10 +11,25 @@ const Background = styled.div `
 const Wrapper = styled(WrapperStyled) `
     height: 650px;
     color: white;
+    flex-direction: column;
+    padding: 70px 0;
+    margin-bottom: 200px;
+    @media (max-width: 800px) {
+        height: auto;
+        padding: 50px;
+        margin-bottom: 1100px;
+    }
+`
+
+const TopWrapper = styled.div `
+    display: flex;
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 `
 
 const LeftWrapper = styled.div `
-
+    margin-top: 5%;
 `
 
 const ColorHeading = styled(ColorHeadingStyled) `
@@ -38,8 +53,12 @@ const Button = styled(ButtonStyled) `
     margin-top: 40px;
 `
 
-const ImageContainer = styled.div `
-    width: 710px;
+const RightWrapper = styled.div `
+    width: 70%;
+    @media (max-width: 800px) {
+        width: 90%;
+        margin-top: 50px;
+    }
 `
 
 const Image = styled.img `
@@ -47,8 +66,8 @@ const Image = styled.img `
 `
 
 const BottomWrapper = styled.div `
-    position: absolute;
-    bottom: -120px;
+    position: relative;
+    bottom: 10px;
     width: 1050px;
     height: 200px;
     background-color: ${dark};
@@ -56,6 +75,13 @@ const BottomWrapper = styled.div `
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
+    @media (max-width: 800px) {
+        position: absolute;
+        flex-direction: column;
+        height: 1050px;
+        width: calc(100% - 100px);
+        bottom: -990px;
+    }
 `
 
 const IconTextContainer = styled.div `
@@ -80,4 +106,4 @@ const Caption = styled(CaptionStyled) `
 
 `
 
-export { Background, Wrapper, LeftWrapper, ColorHeading, Heading, SubHeading, Text, Button, ImageContainer, Image, BottomWrapper, IconTextContainer, Icon, CaptionBold, Caption }
+export { Background, Wrapper, TopWrapper, LeftWrapper, ColorHeading, Heading, SubHeading, Text, Button, RightWrapper, Image, BottomWrapper, IconTextContainer, Icon, CaptionBold, Caption }
