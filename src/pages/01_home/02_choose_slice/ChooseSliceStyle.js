@@ -5,7 +5,7 @@ import { colors } from "../../../components/Colors";
 const {backgroundColor, light} = colors
 
 const Wrapper = styled(WrapperStyled)`
-    height: 930px;
+    height: auto;
     padding: 100px 0;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,12 @@ const BottomWrapper = styled.div `
     width: 100%;
     display: flex;
     justify-content: space-around;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-top: 50px;
+    }
 `
 
 const ImageTextWrapper = styled.div `
@@ -28,7 +34,7 @@ const ImageTextWrapper = styled.div `
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 20px 20px;
-    height: 500px;
+    height: 600px;
     width: 330px;
     border-top-right-radius: 150px;
     border-top-left-radius: 150px;
