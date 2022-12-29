@@ -81,7 +81,7 @@ const IconsTextsWrapper = styled.div `
         gap: 50px;
         width: 100%;
         align-items: center;
-        margin-top: 100px;
+        margin: 100px 0;
     }
 `
 
