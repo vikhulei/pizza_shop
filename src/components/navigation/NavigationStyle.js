@@ -12,7 +12,7 @@ const Background = styled.div `
     left: 0px;
     width: 100%;
     height: 65px;
-    background-color: white;
+    background-color: rgba(255,255,255,0.9);
     z-index: 100;
 `
 
@@ -23,7 +23,6 @@ const Wrapper = styled(WrapperStyled) `
         width: 100vw;
         top: 65px;
         padding: 0 0 0px 80px;
-        background-color: white;
         opacity: 0.9;
         flex-direction: column;
     }    
@@ -58,7 +57,6 @@ const LogoWrapper = styled.div `
         top: -65px;
         text-align: left;
         width: 100vw;
-        background-color: white;
     }
 `
 
