@@ -12,7 +12,7 @@ const Wrapper = styled(WrapperStyled) `
     height: 650px;
     color: white;
     flex-direction: column;
-    padding: 70px 0;
+    padding: 70px 20px;
     margin-bottom: 200px;
     @media (max-width: 800px) {
         height: auto;
@@ -75,6 +75,10 @@ const BottomWrapper = styled.div `
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
+    // @media (max-width: 1100px) {
+    //     width: 850px;
+    //     height: 200px;
+    // }
     @media (max-width: 800px) {
         position: absolute;
         flex-direction: column;
@@ -96,6 +100,9 @@ const IconTextContainer = styled.div `
 
 const Icon = styled.img `
     height: 70px;
+    @media (max-width: 800px) {
+        
+    }
 `
 
 const CaptionBold = styled(CaptionBoldStyled) `

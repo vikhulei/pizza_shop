@@ -11,6 +11,7 @@ const WrapperStyled = styled.div `
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // background-color: red;
 `
 
 const HeadingStyled = styled.h1 `
