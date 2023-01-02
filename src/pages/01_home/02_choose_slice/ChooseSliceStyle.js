@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { ButtonStyled, CaptionBoldStyled, CaptionStyled, HeadingStyled, SubHeadingStyled, WrapperStyled } from "../../../components/ui/StyledComponents";
 import { colors } from "../../../components/Colors";
 
-const {backgroundColor, light} = colors
+const { light } = colors
 
 const Wrapper = styled(WrapperStyled)`
     height: auto;
-    padding: 100px 0;
+    padding: 100px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,6 +21,7 @@ const BottomWrapper = styled.div `
     width: 100%;
     display: flex;
     justify-content: space-around;
+    gap: 20px;
     @media screen and (max-width: 800px) {
         flex-direction: column;
         align-items: center;
