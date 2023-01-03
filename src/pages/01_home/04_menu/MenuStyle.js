@@ -9,6 +9,9 @@ const Wrapper = styled(WrapperStyled)`
     height: 1200px;
     // padding: 220px 0 0;
     display: block;
+    @media (max-width: 800px) {
+        height: fit-content;
+    }
 `
 
 const TopWrapper = styled.div `
@@ -24,6 +27,22 @@ const SubHeading = styled(SubHeadingStyled) `
 
 `
 
+const BottomWrapper = styled.div `
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+`
+
+const ColumnWrapper = styled.div `
+    display: flex;
+    flex-direction: column;
+`
+
+
 const MiddleWrapper = styled.div `
     display: flex;
     justify-content: space-between;
@@ -33,8 +52,13 @@ const MiddleWrapper = styled.div `
 const ImageTextWrapper = styled.div `
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px 20px;
-    height: 250px;
+    margin: 50px 0px 50px;
+    height: 200px;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
 `
 
 const Image = styled.img `
@@ -46,16 +70,13 @@ const TextWrapper = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 800px) {
+        align-items: center;
+        line-height: 2;
+    }
 `
 
-const BottomWrapper = styled.div `
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-`
-
-const ColumnInBottomWrapper = styled.div `
+const ColumnMenuWrapper = styled.div `
     width: 100%;
 `
 
@@ -115,4 +136,4 @@ const Button = styled(ButtonStyled) `
     width: 200px;
 `
 
-export {Wrapper, TopWrapper, MiddleWrapper,BottomWrapper, ColumnInBottomWrapper, PizzaNameContainer, PizzaLine, Line, Price,  ImageTextWrapper, Image, TextWrapper, Heading, SubHeading, Caption, CaptionBold, MenuItemName, MenuItemDescription, Button}
+export {Wrapper, TopWrapper, MiddleWrapper,BottomWrapper, ColumnWrapper, ColumnMenuWrapper, PizzaNameContainer, PizzaLine, Line, Price,  ImageTextWrapper, Image, TextWrapper, Heading, SubHeading, Caption, CaptionBold, MenuItemName, MenuItemDescription, Button}
