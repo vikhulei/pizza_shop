@@ -63,6 +63,9 @@ const ImageTextWrapper = styled.div `
 
 const Image = styled.img `
     height: 100%;
+    @media (max-width: 800px) {
+        width: 40%;
+    }
 `
 
 const TextWrapper = styled.div `
